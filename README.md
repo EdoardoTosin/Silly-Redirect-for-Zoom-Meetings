@@ -6,16 +6,16 @@
 </h1>
 
 <p align="center">
-  <a href="https://addons.mozilla.org/firefox/addon/zoom-web-client-redirector">
-    <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get ZooMeeting Redirectoror for Firefox" height=80px></a>
+  <a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
+    <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get ZooMeeting Redirector for Firefox" height=80px></a>
   <a href="https://chrome.google.com/webstore/detail/zoom-web-client-redirecto/ommndciompclncigoffdnipifnfnaclj">
-    <img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirectoror for Chromium" height=80px></a>
+    <img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirector for Chromium" height=80px></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
-    <img src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get ZooMeeting Redirectoror for Microsoft Edge" height=80px></a>
+    <img src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get ZooMeeting Redirector for Microsoft Edge" height=80px></a>
 </p>
 
 <p align="center">
-  <img alt="Firefox users" src="https://img.shields.io/amo/users/zoom-web-client-redirector?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
+  <img alt="Firefox users" src="https://img.shields.io/amo/users/zoomeeting-redirector?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
   <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/ommndciompclncigoffdnipifnfnaclj?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge">
   <img alt="Edge users" src="https://img.shields.io/badge/dynamic/json?label=Edge%20Users&style=for-the-badge&logo=microsoft-edge&query=activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn">
 </p>
@@ -76,8 +76,8 @@ When opening the dashboard there is a toggle to enable/disable the extension to 
     </thead>
     <tbody align="center">
         <tr>
-          <td><a href="https://addons.mozilla.org/firefox/addon/zoom-web-client-redirector">
-         <img alt="Mozilla Firefox Add-on" src="https://img.shields.io/amo/v/zoom-web-client-redirector?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
+          <td><a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
+         <img alt="Mozilla Firefox Add-on" src="https://img.shields.io/amo/v/zoomeeting-redirector?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
           <td><a href="https://chrome.google.com/webstore/detail/zoom-web-client-redirecto/ommndciompclncigoffdnipifnfnaclj">
           <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/ommndciompclncigoffdnipifnfnaclj?label=chrome&logo=google-chrome&style=for-the-badge"></a></td>
           <td><a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
