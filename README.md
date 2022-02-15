@@ -1,7 +1,3 @@
-| **:warning: WARNING** |
-|:---------------------------:|
-| **Due to a reported trademark infringement the web extension might not be available. I have already contacted the other party to get this issue resolved as soon as possible.** |
-
 <h1 align="center">
   <sub>
     <img  src="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png" height="38" width="38">
