@@ -1,6 +1,6 @@
 <h1 align="center">
   <sub>
-    <img  src="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png" height="38" width="38">
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png" height="38" width="38">
   </sub>
   ZooMeeting Redirector
 </h1>
