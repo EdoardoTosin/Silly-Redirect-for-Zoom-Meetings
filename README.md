@@ -34,7 +34,7 @@
   * [Extension toggle](#extension-toggle)
 * [Installation](#installation)
 * [Dashboard](#dashboard)
-* [Zoom page example](#zoom-page-example)
+* [Redirect example](#redirect-example)
 * [Privacy policy](#privacy-policy)
 * [Permissions](#permissions)
 * [Release History](#release-history)
@@ -111,7 +111,7 @@ When opening the dashboard there is a toggle to enable/disable the extension to 
     </tbody>
 </table>
 
-## Zoom page example
+## Redirect example
 
 ![Gif](https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/assets/example/redirect_clip.gif)
 
