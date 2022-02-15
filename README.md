@@ -21,8 +21,8 @@
 </p>
 <p align="center">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/EdoardoTosin/ZooMeeting-Redirector?label=Latest%20Release&style=for-the-badge">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues/edoardotosin/Zoom-Web-Client-Redirectoror?style=for-the-badge"/>
-  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/edoardotosin/Zoom-Web-Client-Redirectoror/total?style=for-the-badge"/>
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/EdoardoTosin/ZooMeeting-Redirector?style=for-the-badge"/>
+  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/ZooMeeting-Redirector/total?style=for-the-badge"/>
 </p>
 
 ## Table of contents
