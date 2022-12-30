@@ -56,13 +56,13 @@ For more information about best practices for securing your Zoom meetings read t
 
 ## Features
 
-### Dark mode
-
-According to system settings the extension's dashboard has the corresponding background.
-
 ### Extension toggle
 
 When opening the dashboard there is a toggle to enable/disable the extension to better control the behaviour whenever wanted.
+
+### Dark mode
+
+According to system settings the extension's dashboard has the corresponding background.
 
 ## Installation
 
@@ -70,21 +70,23 @@ When opening the dashboard there is a toggle to enable/disable the extension to 
     <thead align="center">
         <tr>
             <th>Mozilla Firefox Add-on</th>
-            <th>Chrome Web Store</th>
+            <th>Chromium*</th>
             <th>Microsoft Edge</th>
         </tr>
     </thead>
     <tbody align="center">
         <tr>
           <td><a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
-         <img alt="Mozilla Firefox Add-on" src="https://img.shields.io/amo/v/zoomeeting-redirector?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
+         <img alt="Mozilla Firefox" src="https://img.shields.io/amo/v/zoomeeting-redirector?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
           <td><a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases" href_x="https://chrome.google.com/webstore/detail/zoom-web-client-redirecto/ommndciompclncigoffdnipifnfnaclj">
-          <img alt_x="Chrome Web Store" src_x="https://img.shields.io/chrome-web-store/v/ommndciompclncigoffdnipifnfnaclj?label=chrome&logo=google-chrome&style=for-the-badge">Only available here</a></td>
+          <img alt_x="Chromium" src_x="https://img.shields.io/chrome-web-store/v/ommndciompclncigoffdnipifnfnaclj?label=chrome&logo=google-chrome&style=for-the-badge">Only available here</a></td>
           <td><a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
        <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge%09%09&logo=microsoft-edge&style=for-the-badge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn"></a></td>
         </tr>
     </tbody>
 </table>
+
+\* Only compatible with Chromium-based browsers that support Manifest V2 (included Chrome until the end of 2023).
 
 ## Dashboard
 
