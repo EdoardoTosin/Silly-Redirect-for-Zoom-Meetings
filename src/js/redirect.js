@@ -1,13 +1,13 @@
 var storage = chrome.storage.sync;
 if (!storage) storage = chrome.storage.local;
 
-// Replace */j/* in the url with */wc/join/*
+// Replace */j/* or */s/* in the url with */wc/join/* or */wc/*/start/
 (function redirect(){
   storage.get("toggle", function(items) {
-      //console.log(items.toggle);
-      if (items.toggle=="true" && window.location.pathname!=null && window.location.pathname.substring(0,3).match(/[/]{1}[(s|j)]{1}[/]{1}/)){
-        var substr = (window.location.pathname.substring(1,2)=='j') ? "/wc/join/" : "/wc/start/";
-        window.location.assign("https://" + window.location.hostname + substr + window.location.pathname.substring(3) + window.location.search);
+	  //console.log(items.toggle);
+      if (items.toggle=="true" && window.location.pathname!=null && ['j','s'].indexOf(window.location.pathname.split('/')[1])+1!=0){
+        var substr = (window.location.pathname.split('/')[1]=='j') ? ["/wc/join/",""] : ["/wc/","/start"];
+        window.location.assign("https://" + window.location.hostname + substr[0] + window.location.pathname.split('/')[2] + substr[1] + window.location.search);
       }
   });
 })();
