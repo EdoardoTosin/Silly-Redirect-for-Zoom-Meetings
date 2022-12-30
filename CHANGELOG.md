@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
-- Fix wrong URL when starting a meeting as a host (#2).
+- Fix wrong URL when starting a meeting as a host ([issue #2](https://github.com/EdoardoTosin/ZooMeeting-Redirector/issues/2)).
 
 ## [3.0.0](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.0.0) - 2022-02-15
 
