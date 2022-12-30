@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.1](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.0.1) - 2022-12-30
+
+### Fixed
+
+- Fix wrong URL when starting a meeting as a host (#2).
+
 ## [3.0.0](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.0.0) - 2022-02-15
 
-## Changed
+### Changed
 
 - Changed extension name due to a trademark issue.
 - Improved matching meeting url.
