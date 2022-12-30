@@ -6,7 +6,7 @@ function setRedirectorOn(){
   storage.set({'toggle': "true"});
   document.getElementsByClassName("switch")[0].title = "Enabled";
   document.getElementById('toggle').setAttribute("checked","");
-  chrome.browserAction.setIcon({
+  chrome.action.setIcon({
       path: {
         "16": "../icons/16x16.png",
         "32": "../icons/32x32.png",
@@ -23,7 +23,7 @@ function setRedirectorOff(){
   storage.set({'toggle': "false"});
   document.getElementsByClassName("switch")[0].title = "Disabled";
   document.getElementById('toggle').removeAttribute("checked");
-  chrome.browserAction.setIcon({
+  chrome.action.setIcon({
       path: {
         "16": "../icons/16x16-off.png",
         "32": "../icons/32x32-off.png",

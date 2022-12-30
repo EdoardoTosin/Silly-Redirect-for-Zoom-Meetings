@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "ZooMeeting Redirector",
   "short_name": "ZooM-WC Red",
   "version": "3.0.1",
@@ -15,9 +15,7 @@
   },
   "permissions": [
     "activeTab",
-    "storage",
-    "*://*.zoom.us/*",
-    "*://*.zoomgov.com/*"
+    "storage"
   ],
   "background": {
     "page": "html/popup.html"
@@ -42,7 +40,13 @@
       "all_frames": false
     }
   ],
-  "browser_action": {
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
+      "strict_min_version": "79.0"
+    }
+  },
+  "action": {
     "browser_style": true,
     "default_icon": {
       "16": "icons/16x16.png",
@@ -55,10 +59,11 @@
     "default_title": "ZooMeeting Redirector",
     "default_popup": "html/popup.html"
   },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
-      "strict_min_version": "79.0"
-    }
-  }
+  "content_security_policy": {
+	  "extension_pages": "default-src 'self'"
+  },
+  "host_permissions": [
+    "*://*.zoom.us/*",
+    "*://*.zoomgov.com/*"
+  ]
 }
