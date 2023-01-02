@@ -1,4 +1,4 @@
-<h1 align="center">Translation progress</h1>
+<h1 align="center">Translation Progress</h1>
 
 > English and Italian language translation has been already completed.
 
