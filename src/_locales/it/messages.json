@@ -1,0 +1,42 @@
+{
+	"name": {
+		"message": "ZooMeeting Redirector",
+		"description": "Nome dell'estensione."
+	},
+	"short_name": {
+		"message": "ZooM-WC Red",
+		"description": "Nome accorciato dell'estensione."
+	},
+	"description": {
+		"message": "Un'estensione che reindirizza le riunioni alla versione web client.",
+		"description": "Descrizione dell'estensione."
+	},
+	"popup_title": {
+		"message": "ZooMeeting\nRedirector",
+		"description": "Titolo dell'estensione visualizzato nel popup."
+	},
+	"enabled": {
+		"message": "Attivato",
+		"description": "Info testo quando l'estensione è attiva."
+	},
+	"disabled": {
+		"message": "Disattivato",
+		"description": "Info testo quando l'estensione non è attiva."
+	},
+	"popup_changelog": {
+		"message": "Changelog",
+		"description": "Titolo dell'URL al changelog."
+	},
+	"popup_issue_tracker": {
+		"message": "Issue Tracker",
+		"description": "Titolo dell'URL al l'issue tracker."
+	},
+	"popup_source_code": {
+		"message": "Codice Sorgente",
+		"description": "Titolo dell'URL al source code."
+	},
+	"popup_addon_version": {
+		"message": "Versione installata",
+		"description": "Titolo dell'elemento addon_version."
+	}
+}

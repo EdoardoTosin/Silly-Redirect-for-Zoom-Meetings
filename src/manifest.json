@@ -1,64 +1,65 @@
 {
-  "manifest_version": 2,
-  "name": "ZooMeeting Redirector",
-  "short_name": "ZooM-WC Red",
-  "version": "3.0.1",
-  "author": "Edoardo Tosin",
-  "description": "A web extension that redirects meetings to the web client.",
-  "homepage_url": "https://github.com/EdoardoTosin/ZooMeeting-Redirector",
-  "icons": {
-    "16": "icons/16x16.png",
-    "32": "icons/32x32.png",
-    "48": "icons/48x48.png",
-    "128": "icons/128x128.png",
-    "256": "icons/256x256.png"
-  },
-  "permissions": [
-    "activeTab",
-    "storage",
-    "*://*.zoom.us/*",
-    "*://*.zoomgov.com/*"
-  ],
-  "background": {
-    "page": "html/popup.html"
-  },
-  "content_scripts": [
-    {
-      "exclude_matches": [
-        "*://*.zoom.us/wc/join/*",
-        "*://*.zoomgov.com/wc/join/*",
-        "file://*/*"
-      ],
-      "matches": [
-        "*://*.zoom.us/*",
-        "*://*.zoomgov.com/*"
-      ],
-      "js": [
-        "js/toggle.js",
-        "js/redirect.js",
-        "js/getManifest.js"
-      ],
-      "run_at": "document_idle",
-      "all_frames": false
-    }
-  ],
-  "browser_action": {
-    "browser_style": true,
-    "default_icon": {
-      "16": "icons/16x16.png",
-      "32": "icons/32x32.png",
-      "48": "icons/48x48.png",
-      "64": "icons/64x64.png",
-      "128": "icons/128x128.png",
-      "256": "icons/256x256.png"
-    },
-    "default_title": "ZooMeeting Redirector",
-    "default_popup": "html/popup.html"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
-      "strict_min_version": "79.0"
-    }
-  }
+	"manifest_version": 2,
+	"name": "__MSG_name__",
+	"short_name": "__MSG_short_name__",
+	"version": "3.0.1",
+	"author": "Edoardo Tosin",
+	"description": "__MSG_description__",
+	"homepage_url": "https://github.com/EdoardoTosin/ZooMeeting-Redirector",
+	"default_locale": "en",
+	"icons": {
+		"16": "icons/16x16.png",
+		"32": "icons/32x32.png",
+		"48": "icons/48x48.png",
+		"128": "icons/128x128.png",
+		"256": "icons/256x256.png"
+	},
+	"permissions": [
+		"activeTab",
+		"storage",
+		"*://*.zoom.us/*",
+		"*://*.zoomgov.com/*"
+	],
+	"background": {
+		"page": "html/popup.html"
+	},
+	"content_scripts": [
+		{
+			"exclude_matches": [
+				"*://*.zoom.us/wc/join/*",
+				"*://*.zoomgov.com/wc/join/*",
+				"file://*/*"
+			],
+			"matches": [
+				"*://*.zoom.us/*",
+				"*://*.zoomgov.com/*"
+			],
+			"js": [
+				"js/toggle.js",
+				"js/redirect.js",
+				"js/getManifest.js"
+			],
+			"run_at": "document_idle",
+			"all_frames": false
+		}
+	],
+	"browser_action": {
+		"browser_style": true,
+		"default_icon": {
+			"16": "icons/16x16.png",
+			"32": "icons/32x32.png",
+			"48": "icons/48x48.png",
+			"64": "icons/64x64.png",
+			"128": "icons/128x128.png",
+			"256": "icons/256x256.png"
+		},
+		"default_title": "__MSG_name__",
+		"default_popup": "html/popup.html"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
+			"strict_min_version": "79.0"
+		}
+	}
 }
