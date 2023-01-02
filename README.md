@@ -159,6 +159,8 @@ Locales are hosted using [Crowdin](https://crowdin.com) to help the process of t
 * Make sure your locale exists there, if it does not exist, open an issue [here](https://github.com/EdoardoTosin/ZooMeeting-Redirector/issues) on Github and I'll add the language option.
 * Get familiar with the Crowdin translation UI, as you will need to use it to translate JSON files.
 
+<a><img title="Crowdin" target="_blank" href="https://crowdin.com/project/zoomeeting-redirector"><img src="https://badges.awesome-crowdin.com/translation-14914365-558421.png" alt="Translation progress"></img></a>
+
 ## Security Policy
 
 For more details see the [SECURITY](https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/SECURITY.md) file.
