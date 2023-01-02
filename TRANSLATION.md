@@ -3,7 +3,7 @@
 > English and Italian language translation has been already completed.
 
 <p>
-    <h3>Translation</h3>
+    <h3>Table</h3>
     <table>
         <tr>
             <th>
@@ -262,6 +262,6 @@
     </table>
 </p>
 <p>
-    <h3>Translation chart</h3>
+    <h3>Chart</h3>
     <img src="https://badges.awesome-crowdin.com/translation-14914365-558421.png" alt="Translation chart"></img>
 </p>
