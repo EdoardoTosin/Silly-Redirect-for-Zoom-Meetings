@@ -1,42 +1,42 @@
 {
 	"name": {
 		"message": "ZooMeeting Redirector",
-		"description": "Name of the extension."
+		"description": "Numele extensiei."
 	},
 	"short_name": {
 		"message": "ZooM-WC Red",
-		"description": "Shorted Name of the extension."
+		"description": "Numele prescurtat al extensiei."
 	},
 	"description": {
-		"message": "A web extension that redirects meetings to the web client.",
-		"description": "Description of the extension."
+		"message": "O extensie web care redirecționează întâlnirile către clientul web.",
+		"description": "Descrierea extensiei."
 	},
 	"popup_title": {
 		"message": "ZooMeeting\nRedirector",
-		"description": "Title of extension inside the popup."
+		"description": "Titlul extensiei în interiorul ferestrei pop-up."
 	},
 	"enabled": {
-		"message": "Enabled",
-		"description": "Text info when extension is enabled."
+		"message": "Activat",
+		"description": "Informații de text când extensia este activată."
 	},
 	"disabled": {
-		"message": "Disabled",
-		"description": "Text info when extension is disabled."
+		"message": "Dezactivat",
+		"description": "Informații text când extensia este dezactivată."
 	},
 	"popup_changelog": {
-		"message": "Changelog",
-		"description": "Title of the changelog URL."
+		"message": "Jurnal de modificări",
+		"description": "Titlul URL-ului jurnalului de modificări."
 	},
 	"popup_issue_tracker": {
-		"message": "Issue Tracker",
-		"description": "Title of the issue tracker URL."
+		"message": "Urmărirea problemelor",
+		"description": "Titlul adresei URL de urmărire a problemei."
 	},
 	"popup_source_code": {
-		"message": "Source Code",
-		"description": "Title of the source code URL."
+		"message": "Cod sursă",
+		"description": "Titlul adresei URL a codului sursă."
 	},
 	"popup_addon_version": {
-		"message": "Installed version",
-		"description": "Title of element addon_version."
+		"message": "Versiunea instalată",
+		"description": "Titlul elementului addon_version."
 	}
 }
