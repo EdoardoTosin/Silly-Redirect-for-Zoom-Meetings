@@ -72,7 +72,7 @@ According to system settings the extension's dashboard has the corresponding bac
         <tr>
             <th>Mozilla Firefox Add-on</th>
             <th>Chromium*</th>
-            <th>Microsoft Edge</th>
+            <th>Microsoft Edge**</th>
         </tr>
     </thead>
     <tbody align="center">
@@ -87,7 +87,9 @@ According to system settings the extension's dashboard has the corresponding bac
     </tbody>
 </table>
 
-\* Only compatible with Chromium-based browsers that support Manifest V2 (included Chrome until the end of 2023).
+\* Only compatible with Chromium-based browsers that support Manifest V2.
+
+\*\* Manifest V2 addons cannot be published anymore. Lastest published version is currently 3.1.0.
 
 ## Dashboard
 
