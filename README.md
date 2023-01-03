@@ -37,11 +37,11 @@
 * [Redirect example](#redirect-example)
 * [Privacy policy](#privacy-policy)
 * [Permissions](#permissions)
-* [Release History](#release-history)
-* [Changelog](#changelog)
-* [Contributing](#contributing)
 * [Translation](#translation)
+* [Changelog](#changelog)
+* [Release History](#release-history)
 * [Security Policy](#security-policy)
+* [Contributing](#contributing)
 * [License](#license)
 
 ## Summary
@@ -137,21 +137,6 @@ ZooMeeting Redirector does **NOT** collect any data of any kind.
 - ``storage`` is used to store the status of the slide checkbox.  
 - ``*://*.zoom.us/*`` and ``*://*.zoomgov.com/*`` are necessary to get the url and modify it to redirect to the web client page.
 
-## Release History
-
-See the [releases pages](https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases) for a history of releases and highlights for each release.
-
-## Changelog
-
-For more details see the [CHANGELOG](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CHANGELOG.md) file.
-
-## Contributing
-
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge)](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CODE_OF_CONDUCT.md)  
-When contributing to this repository, please first discuss the change you wish to make via issue, discussion, or any other method with the owner of this repository before making a change.
-
-**Read carefully the [contributing guidelines](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CONTRIBUTING.md).**
-
 ## Translation
 
 Locales are hosted using [Crowdin](https://crowdin.com) to help the process of translation. To translate it, please follow these steps:
@@ -161,9 +146,24 @@ Locales are hosted using [Crowdin](https://crowdin.com) to help the process of t
 
 For translation progress details see the [TRANSLATION](https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/TRANSLATION.md) file.
 
+## Changelog
+
+For more details see the [CHANGELOG](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CHANGELOG.md) file.
+
+## Release History
+
+See the [releases pages](https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases) for a history of releases and highlights for each release.
+
 ## Security Policy
 
 For more details see the [SECURITY](https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/SECURITY.md) file.
+
+## Contributing
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge)](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CODE_OF_CONDUCT.md)  
+When contributing to this repository, please first discuss the change you wish to make via issue, discussion, or any other method with the owner of this repository before making a change.
+
+**Read carefully the [contributing guidelines](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CONTRIBUTING.md).**
 
 ## License
 
