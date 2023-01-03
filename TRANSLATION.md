@@ -1,8 +1,6 @@
 # Translation Progress
 
-## Table of contents
-* [Chart](#chart)
-* [Table](#table)
+[Crowdin Project](https://crowdin.com/project/zoomeeting-redirector)
 
 ## Chart
 
