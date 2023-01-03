@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "__MSG_name__",
 	"short_name": "__MSG_short_name__",
-	"version": "3.1.0",
+	"version": "3.2.0",
 	"author": "Edoardo Tosin",
 	"description": "__MSG_description__",
 	"homepage_url": "https://github.com/EdoardoTosin/ZooMeeting-Redirector",
