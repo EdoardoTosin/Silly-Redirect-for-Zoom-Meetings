@@ -18,7 +18,7 @@
     "storage"
   ],
   "background": {
-    "page": "html/popup.html"
+    "service_worker": "html/popup.html"
   },
   "content_scripts": [
     {
