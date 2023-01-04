@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "ZooMeeting Redirector",
-  "short_name": "ZooM-WC Red",
-  "version": "3.0.1",
+  "name": "__MSG_name__",
+  "short_name": "__MSG_short_name__",
+  "version": "3.2.0",
   "author": "Edoardo Tosin",
-  "description": "A web extension that redirects meetings to the web client.",
+  "description": "__MSG_description__",
   "homepage_url": "https://github.com/EdoardoTosin/ZooMeeting-Redirector",
+  "default_locale": "en",
   "icons": {
     "16": "icons/16x16.png",
     "32": "icons/32x32.png",
@@ -56,7 +57,7 @@
       "128": "icons/128x128.png",
       "256": "icons/256x256.png"
     },
-    "default_title": "ZooMeeting Redirector",
+    "default_title": "__MSG_name__",
     "default_popup": "html/popup.html"
   },
   "content_security_policy": {

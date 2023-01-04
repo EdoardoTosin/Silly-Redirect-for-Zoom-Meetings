@@ -4,7 +4,7 @@ if (!storage) storage = chrome.storage.local;
 // Change Icon, Toggle and chrome.storage to true/on.
 function setRedirectorOn(){
   storage.set({'toggle': "true"});
-  document.getElementsByClassName("switch")[0].title = "Enabled";
+  document.getElementsByClassName("switch")[0].title = chrome.i18n.getMessage("enabled");
   document.getElementById('toggle').setAttribute("checked","");
   chrome.action.setIcon({
       path: {
@@ -21,7 +21,7 @@ function setRedirectorOn(){
 // Change Icon, Toggle and chrome.storage to false/off.
 function setRedirectorOff(){
   storage.set({'toggle': "false"});
-  document.getElementsByClassName("switch")[0].title = "Disabled";
+  document.getElementsByClassName("switch")[0].title = chrome.i18n.getMessage("disabled");
   document.getElementById('toggle').removeAttribute("checked");
   chrome.action.setIcon({
       path: {
