@@ -9,7 +9,7 @@
   <a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
     <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get ZooMeeting Redirector for Firefox" height=80px></a>
   <a href="https://chrome.google.com/webstore/detail/bfkjcjmaimcoidkipkgochffmlbfhbfj">
-    <img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirector for Chromium" height=80px></a>
+    <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirector for Chromium" height=80px></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
     <img src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get ZooMeeting Redirector for Microsoft Edge" height=80px></a>
 </p>
