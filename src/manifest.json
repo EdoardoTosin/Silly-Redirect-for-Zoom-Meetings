@@ -34,7 +34,7 @@
       ],
       "js": [
         "js/toggle.js",
-        "js/redirect.js",
+        "js/background.js",
         "js/getManifest.js"
       ],
       "run_at": "document_idle",
