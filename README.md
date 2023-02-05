@@ -63,7 +63,7 @@ When opening the dashboard there is a toggle to enable/disable the extension to 
 
 ### Dark mode
 
-According to system settings the extension's dashboard has the corresponding background.
+According to system settings the extension's dashboard has the corresponding theme.
 
 ## Installation
 
