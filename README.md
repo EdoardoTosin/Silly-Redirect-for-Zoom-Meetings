@@ -8,15 +8,15 @@
 <p align="center">
   <a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
     <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get ZooMeeting Redirector for Firefox" height=80px></a>
-  <!--a href="https://chrome.google.com/webstore/detail/zoom-web-client-redirecto/ommndciompclncigoffdnipifnfnaclj">
-    <img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirector for Chromium" height=80px></a-->
+  <a href="https://chrome.google.com/webstore/detail/bfkjcjmaimcoidkipkgochffmlbfhbfj">
+    <img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirector for Chromium" height=80px></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
     <img src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get ZooMeeting Redirector for Microsoft Edge" height=80px></a>
 </p>
 
 <p align="center">
   <img alt="Firefox users" src="https://img.shields.io/amo/users/zoomeeting-redirector?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
-  <!--img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/ommndciompclncigoffdnipifnfnaclj?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge"-->
+  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/bfkjcjmaimcoidkipkgochffmlbfhbfj?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge">
   <img alt="Edge users" src="https://img.shields.io/badge/dynamic/json?label=Edge%20Users&style=for-the-badge&logo=microsoft-edge&query=activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn">
 </p>
 <p align="center">
@@ -71,25 +71,23 @@ According to system settings the extension's dashboard has the corresponding bac
     <thead align="center">
         <tr>
             <th>Mozilla Firefox Add-on</th>
-            <th>Chromium*</th>
-            <th>Microsoft Edge**</th>
+            <th>Chrome (and Chromium based browsers)*</th>
+            <th>Microsoft Edge*</th>
         </tr>
     </thead>
     <tbody align="center">
         <tr>
           <td><a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
          <img alt="Mozilla Firefox" src="https://img.shields.io/amo/v/zoomeeting-redirector?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
-          <td><a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases" href_x="https://chrome.google.com/webstore/detail/zoom-web-client-redirecto/ommndciompclncigoffdnipifnfnaclj">
-          <img alt_x="Chromium" src_x="https://img.shields.io/chrome-web-store/v/ommndciompclncigoffdnipifnfnaclj?label=chrome&logo=google-chrome&style=for-the-badge">Only available here</a></td>
+          <td><a href="https://chrome.google.com/webstore/detail/bfkjcjmaimcoidkipkgochffmlbfhbfj">
+          <img alt="Chrome" src="https://img.shields.io/chrome-web-store/v/bfkjcjmaimcoidkipkgochffmlbfhbfj?label=chrome&logo=google-chrome&style=for-the-badge"></a></td>
           <td><a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
        <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge%09%09&logo=microsoft-edge&style=for-the-badge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn"></a></td>
         </tr>
     </tbody>
 </table>
 
-\* Only compatible with Chromium-based browsers that support Manifest V2.
-
-\*\* Manifest V2 addons cannot be published anymore. Lastest published version is currently 3.1.0.
+\* Addon is based on branch [manifest-v3](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/manifest-v3)
 
 ## Dashboard
 
@@ -126,6 +124,8 @@ ZooMeeting Redirector does **NOT** collect any data of any kind.
 
 ## Permissions
 
+**Manifest V2** ([main](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main) branch)
+
 ``` json
 "permissions": [
   "activeTab",
@@ -133,6 +133,19 @@ ZooMeeting Redirector does **NOT** collect any data of any kind.
   "*://*.zoom.us/*",
   "*://*.zoomgov.com/*"
 ],
+```
+
+**Manifest V3** ([manifest-v3](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/manifest-v3) branch)
+
+``` json
+"permissions": [
+    "activeTab",
+    "storage"
+],
+"host_permissions": [
+    "*://*.zoom.us/*",
+    "*://*.zoomgov.com/*"
+]
 ```
 
 - ``activeTab`` is necessary to be able to open hyperlinks in the dashboard.
