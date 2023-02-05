@@ -71,7 +71,7 @@ According to system settings the extension's dashboard has the corresponding bac
     <thead align="center">
         <tr>
             <th>Mozilla Firefox Add-on</th>
-            <th>Chrome (and Chromium based browsers)*</th>
+            <th>Chrome (and<br>Chromium<br>based browsers)*</th>
             <th>Microsoft Edge*</th>
         </tr>
     </thead>
