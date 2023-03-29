@@ -1,0 +1,22 @@
+{
+  "name": "ZooMeeting Redirector",
+  "logo": "https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png",
+  "noHeader": true,
+  "favicon": "https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png",
+  "darkTheme": true,
+  "dist": "docs",
+  "repo": "https://github.com/EdoardoTosin/ZooMeeting-Redirector",
+  "styles": "assets/styles.css",
+  "meta": [
+    { "name": "author", "content": "Edoardo Tosin" },
+	  { "property": "og:image", "content": "" },
+
+    { "property": "og:site_name", "content": "ZooMeeting Redirector" },
+	  { "name": "twitter:card", "content": "summary_large_image" },
+	  { "name": "twitter:image:alt", "content": "ZooMeeting Redirector" },
+
+	  { "itemprop": "name", "content": "ZooMeeting Redirector" },
+	  { "itemprop": "description", "content": "A web extension that redirects zoom meetings to the web client version." },
+	  { "itemprop": "image", "content": "" }
+  ]
+}
