@@ -5,28 +5,24 @@
 <meta charset="utf-8">
 <link rel="icon" href="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png">
 
-  <meta charset="utf-8" />
+<meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  
-      <meta name="image" content="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png">
-      
-  <meta property="og:type" content="website">
-  
-      <meta itemprop="name" content="ZooMeeting Redirector">
-      <meta property="og:title" content="ZooMeeting Redirector">
-      <meta property="og:site_name" content="ZooMeeting Redirector">
-      
-  
-  
-  
+  <meta name="description" content="A web extension that redirects zoom meetings to the web client version.">
+  <meta name="image" content="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png">
+  <meta itemprop="name" content="ZooMeeting Redirector">
+  <meta itemprop="description" content="A web extension that redirects zoom meetings to the web client version.">
+  <meta itemprop="image" content="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png">
+  <meta name="og:title" content="ZooMeeting Redirector">
+  <meta name="og:description" content="A web extension that redirects zoom meetings to the web client version.">
+  <meta name="og:url" content="undefined">
+  <meta name="og:site_name" content="ZooMeeting Redirector">
+  <meta name="og:type" content="website">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="dark">
-  <meta name="author" content="Edoardo Tosin" /><meta property="og:site_name" content="ZooMeeting Redirector" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image:alt" content="ZooMeeting Redirector" /><meta itemprop="name" content="ZooMeeting Redirector" /><meta itemprop="description" content="A web extension that redirects zoom meetings to the web client version." />
-  
-  
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700i,900">
 <link rel="stylesheet" href="style.css">
 
 
@@ -43,7 +39,7 @@
 <p align="center">
   <a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
     <img class="badge" src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get ZooMeeting Redirector for Firefox" height=80px></a>
-  <a href="https://chrome.google.com/webstore/detail/bfkjcjmaimcoidkipkgochffmlbfhbfj">
+  <a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
     <img class="badge" src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get ZooMeeting Redirector for Chromium" height=80px></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
     <img class="badge" src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get ZooMeeting Redirector for Microsoft Edge" height=80px></a>
@@ -51,7 +47,7 @@
 
 <p align="center">
   <img alt="Firefox users" src="https://img.shields.io/amo/users/zoomeeting-redirector?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
-  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/bfkjcjmaimcoidkipkgochffmlbfhbfj?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge">
+  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/dammgkhaofolinipgnjjiocadmmhidch?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge">
   <img alt="Edge users" src="https://img.shields.io/badge/dynamic/json?label=Edge%20Users&style=for-the-badge&logo=microsoft-edge&query=activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn">
 </p>
 <p align="center">
@@ -59,19 +55,19 @@
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/EdoardoTosin/ZooMeeting-Redirector?style=for-the-badge"/>
   <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/ZooMeeting-Redirector/total?style=for-the-badge"/>
 </p>
-<h2 id="summary" tabindex="-1"><a id="user-content-summary" class="anchor" href="#summary" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<h2 id="summary"><a id="user-content-summary" class="anchor" href="#summary" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
 <p>A web extension that redirects zoom meetings to the web client version.</p>
-<h2 id="description" tabindex="-1"><a id="user-content-description" class="anchor" href="#description" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h2>
+<h2 id="description"><a id="user-content-description" class="anchor" href="#description" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h2>
 <p>This project was intended to make it easier to redirect Zoom meetings links to the web client page.<br />
 This browser addon works by replacing a portion of the url with <code>*/wc/join/*</code> so that it loads the meeting joining page. For example <code>https://zoom.us/j/0123456789</code> would be converted to <code>https://zoom.us/wc/join/0123456789</code>.<br />
 The web client is preferable over the desktop app because of the restriction that web browsers places on web pages, protecting your computer against malicious attacks and unauthorized access of your machine.<br />
-For more information about best practices for securing your Zoom meetings read this blog post: <a href="https://www.kaspersky.com/blog/zoom-security-ten-tips/34729" target="_blank">10 tips for Zoom security and privacy</a>.</p>
-<h2 id="features" tabindex="-1"><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features</h2>
-<h3 id="extension-toggle" tabindex="-1"><a id="user-content-extension-toggle" class="anchor" href="#extension-toggle" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extension toggle</h3>
+For more information about best practices for securing your Zoom meetings read this blog post: <a href="https://www.kaspersky.com/blog/zoom-security-ten-tips/34729" rel="noopener noreferrer" target="_blank">10 tips for Zoom security and privacy</a>.</p>
+<h2 id="features"><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features</h2>
+<h3 id="extensiontoggle"><a id="user-content-extensiontoggle" class="anchor" href="#extensiontoggle" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extension toggle</h3>
 <p>When opening the dashboard there is a toggle to enable/disable the extension to better control the behaviour whenever wanted.</p>
-<h3 id="dark-mode" tabindex="-1"><a id="user-content-dark-mode" class="anchor" href="#dark-mode" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dark mode</h3>
+<h3 id="darkmode"><a id="user-content-darkmode" class="anchor" href="#darkmode" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dark mode</h3>
 <p>According to system settings the extension's dashboard has the corresponding theme.</p>
-<h2 id="installation" tabindex="-1"><a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<h2 id="installation"><a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
 <table>
     <thead align="center">
         <tr>
@@ -84,14 +80,14 @@ For more information about best practices for securing your Zoom meetings read t
         <tr>
           <td><a href="https://addons.mozilla.org/firefox/addon/zoomeeting-redirector">
          <img alt="Mozilla Firefox" src="https://img.shields.io/amo/v/zoomeeting-redirector?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
-          <td><a href="https://chrome.google.com/webstore/detail/bfkjcjmaimcoidkipkgochffmlbfhbfj">
-          <img alt="Chrome" src="https://img.shields.io/chrome-web-store/v/bfkjcjmaimcoidkipkgochffmlbfhbfj?label=chrome&logo=google-chrome&style=for-the-badge"></a></td>
+          <td><a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
+          <img alt="Chrome" src="https://img.shields.io/chrome-web-store/v/dammgkhaofolinipgnjjiocadmmhidch?label=chrome&logo=google-chrome&style=for-the-badge"></a></td>
           <td><a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
        <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge%09%09&logo=microsoft-edge&style=for-the-badge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn"></a></td>
         </tr>
     </tbody>
-</table><p>* Addon is based on branch <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/manifest-v3" target="_blank">manifest-v3</a></p>
-<h2 id="dashboard" tabindex="-1"><a id="user-content-dashboard" class="anchor" href="#dashboard" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dashboard</h2>
+</table><p>* Addon is based on branch <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/manifest-v3" rel="noopener noreferrer" target="_blank">manifest-v3</a></p>
+<h2 id="dashboard"><a id="user-content-dashboard" class="anchor" href="#dashboard" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dashboard</h2>
 <table>
     <thead align="center">
         <tr>
@@ -113,55 +109,56 @@ For more information about best practices for securing your Zoom meetings read t
           <td><img alt="Toggle On - Dark Mode" src="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/assets/dashboard/on-dark.png"></td>
         </tr>
     </tbody>
-</table><h2 id="redirect-example" tabindex="-1"><a id="user-content-redirect-example" class="anchor" href="#redirect-example" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redirect example</h2>
+</table><h2 id="redirectexample"><a id="user-content-redirectexample" class="anchor" href="#redirectexample" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redirect example</h2>
 <p><img src="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/assets/example/redirect_clip.gif" alt="Gif" /></p>
-<h2 id="privacy-policy" tabindex="-1"><a id="user-content-privacy-policy" class="anchor" href="#privacy-policy" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Privacy policy</h2>
+<h2 id="privacypolicy"><a id="user-content-privacypolicy" class="anchor" href="#privacypolicy" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Privacy policy</h2>
 <p>ZooMeeting Redirector does <strong>NOT</strong> collect any data of any kind.</p>
-<h2 id="permissions" tabindex="-1"><a id="user-content-permissions" class="anchor" href="#permissions" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions</h2>
-<p><strong>Manifest V2</strong> (<a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main" target="_blank">main</a> branch)</p>
-<pre class="language-json"><code class="language-json"><span class="token property">"permissions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-  <span class="token string">"activeTab"</span><span class="token punctuation">,</span>
-  <span class="token string">"storage"</span><span class="token punctuation">,</span>
-  <span class="token string">"*://*.zoom.us/*"</span><span class="token punctuation">,</span>
-  <span class="token string">"*://*.zoomgov.com/*"</span>
-<span class="token punctuation">]</span><span class="token punctuation">,</span>
-</code></pre>
-<p><strong>Manifest V3</strong> (<a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/manifest-v3" target="_blank">manifest-v3</a> branch)</p>
-<pre class="language-json"><code class="language-json"><span class="token property">"permissions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token string">"activeTab"</span><span class="token punctuation">,</span>
-    <span class="token string">"storage"</span>
-<span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token property">"host_permissions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token string">"*://*.zoom.us/*"</span><span class="token punctuation">,</span>
-    <span class="token string">"*://*.zoomgov.com/*"</span>
-<span class="token punctuation">]</span>
-</code></pre>
+<h2 id="permissions"><a id="user-content-permissions" class="anchor" href="#permissions" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions</h2>
+<p><strong>Manifest V2</strong> (<a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main" rel="noopener noreferrer" target="_blank">main</a> branch)</p>
+<pre><code class="json language-json">"permissions": [
+  "activeTab",
+  "storage",
+  "*://*.zoom.us/*",
+  "*://*.zoomgov.com/*"
+],</code></pre>
+<p><strong>Manifest V3</strong> (<a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/manifest-v3" rel="noopener noreferrer" target="_blank">manifest-v3</a> branch)</p>
+<pre><code class="json language-json">"permissions": [
+    "activeTab",
+    "storage"
+],
+"host_permissions": [
+    "*://*.zoom.us/*",
+    "*://*.zoomgov.com/*"
+]</code></pre>
 <ul>
 <li><code>activeTab</code> is necessary to be able to open hyperlinks in the dashboard.</li>
-<li><code>storage</code> is used to store the status of the slide checkbox.</li>
+<li><code>storage</code> is used to store the status of the slide checkbox.  </li>
 <li><code>*://*.zoom.us/*</code> and <code>*://*.zoomgov.com/*</code> are necessary to get the url and modify it to redirect to the web client page.</li>
 </ul>
-<h2 id="translation" tabindex="-1"><a id="user-content-translation" class="anchor" href="#translation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Translation</h2>
-<p>Locales are hosted using <a href="https://crowdin.com" target="_blank">Crowdin</a> to help the process of translation. To translate it, please follow these steps:</p>
+<h2 id="translation"><a id="user-content-translation" class="anchor" href="#translation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Translation</h2>
+<p>Locales are hosted using <a href="https://crowdin.com" rel="noopener noreferrer" target="_blank">Crowdin</a> to help the process of translation. To translate it, please follow these steps:</p>
 <ul>
-<li>Sign up on <a href="https://accounts.crowdin.com/register" target="_blank">Crowdin</a> and Join the project <a href="https://crowdin.com/project/zoomeeting-redirector" target="_blank">here</a>.</li>
-<li>Make sure your locale exists there, if it does not exist, open an issue <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/issues" target="_blank">here</a> on Github and I'll add the language option.</li>
+<li>Sign up on <a href="https://accounts.crowdin.com/register" rel="noopener noreferrer" target="_blank">Crowdin</a> and Join the project <a href="https://crowdin.com/project/zoomeeting-redirector" rel="noopener noreferrer" target="_blank">here</a>.</li>
+<li>Make sure your locale exists there, if it does not exist, open an issue <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/issues" rel="noopener noreferrer" target="_blank">here</a> on Github and I'll add the language option.</li>
 <li>Get familiar with the Crowdin translation UI, as you will need to use it to translate JSON files.</li>
 </ul>
-<p>For translation progress details see the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/TRANSLATION.md" target="_blank">TRANSLATION</a> file.</p>
-<h2 id="changelog" tabindex="-1"><a id="user-content-changelog" class="anchor" href="#changelog" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changelog</h2>
-<p>For more details see the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CHANGELOG.md" target="_blank">CHANGELOG</a> file.</p>
-<h2 id="release-history" tabindex="-1"><a id="user-content-release-history" class="anchor" href="#release-history" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Release History</h2>
-<p>See the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases" target="_blank">releases pages</a> for a history of releases and highlights for each release.</p>
-<h2 id="security-policy" tabindex="-1"><a id="user-content-security-policy" class="anchor" href="#security-policy" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Security Policy</h2>
-<p>For more details see the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/SECURITY.md" target="_blank">SECURITY</a> file.</p>
-<h2 id="contributing" tabindex="-1"><a id="user-content-contributing" class="anchor" href="#contributing" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contributing</h2>
-<p><a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CODE_OF_CONDUCT.md" target="_blank"><img src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge" alt="Contributor Covenant" /></a><br />
+<p>For translation progress details see the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/TRANSLATION.md" rel="noopener noreferrer" target="_blank">TRANSLATION</a> file.</p>
+<h2 id="changelog"><a id="user-content-changelog" class="anchor" href="#changelog" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changelog</h2>
+<p>For more details see the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CHANGELOG.md" rel="noopener noreferrer" target="_blank">CHANGELOG</a> file.</p>
+<h2 id="releasehistory"><a id="user-content-releasehistory" class="anchor" href="#releasehistory" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Release History</h2>
+<p>See the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases" rel="noopener noreferrer" target="_blank">releases pages</a> for a history of releases and highlights for each release.</p>
+<h2 id="securitypolicy"><a id="user-content-securitypolicy" class="anchor" href="#securitypolicy" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Security Policy</h2>
+<p>For more details see the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/blob/main/SECURITY.md" rel="noopener noreferrer" target="_blank">SECURITY</a> file.</p>
+<h2 id="contributing"><a id="user-content-contributing" class="anchor" href="#contributing" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contributing</h2>
+<p><a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CODE_OF_CONDUCT.md" rel="noopener noreferrer" target="_blank"><img src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge" alt="Contributor Covenant" /></a><br />
 When contributing to this repository, please first discuss the change you wish to make via issue, discussion, or any other method with the owner of this repository before making a change.</p>
-<p><strong>Read carefully the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CONTRIBUTING.md" target="_blank">contributing guidelines</a>.</strong></p>
-<h2 id="license" tabindex="-1"><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
-<p>This software is released under the terms of the GNU General Public License v3.0. See the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/LICENSE" target="_blank">LICENSE</a> file for further information.</p>
-</div></div></div>
+<p><strong>Read carefully the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">contributing guidelines</a>.</strong></p>
+<h2 id="license"><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
+<p>This software is released under the terms of the GNU General Public License v3.0. See the <a href="https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/main/LICENSE" rel="noopener noreferrer" target="_blank">LICENSE</a> file for further information.</p></div></div></div>
+<script src="https://unpkg.com/prismjs@1.15.0/prism.js"></script>
+<script src="https://unpkg.com/prismjs@1.15.0/components/prism-json.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.15.0/components/prism-bash.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.15.0/components/prism-markdown.min.js"></script>
 
 </body>
 </html>
