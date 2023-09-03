@@ -25,25 +25,6 @@
   <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/ZooMeeting-Redirector/total?style=for-the-badge"/>
 </p>
 
-## Table of contents
-
-* [Summary](#summary)
-* [Description](#description)
-* [Features](#features)
-  * [Dark mode](#dark-mode)
-  * [Extension toggle](#extension-toggle)
-* [Installation](#installation)
-* [Dashboard](#dashboard)
-* [Redirect example](#redirect-example)
-* [Privacy policy](#privacy-policy)
-* [Permissions](#permissions)
-* [Translation](#translation)
-* [Changelog](#changelog)
-* [Release History](#release-history)
-* [Security Policy](#security-policy)
-* [Contributing](#contributing)
-* [License](#license)
-
 ## Summary
 
 A web extension that redirects zoom meetings to the web client version.
