@@ -4,27 +4,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.2.0](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.2.0) - 2023-01-03
+## [4.0.0](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v4.0.0) - 2023-10-03
+
+### Changed
+
+- Extension name due to trademark issue.
+
+## [3.2.0](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v3.2.0) - 2023-01-03
 
 ### Added
 
 - Add Romanian translation.
 
-## [3.1.0](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.1.0) - 2023-01-02
+## [3.1.0](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v3.1.0) - 2023-01-02
 
 ### Added
 
-- Add initial multilanguage support ([issue #4](https://github.com/EdoardoTosin/ZooMeeting-Redirector/issues/4)).
+- Add initial multilanguage support ([issue #4](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/issues/4)).
 - Add Italian translation.
 - Add French translation.
 
-## [3.0.1](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.0.1) - 2022-12-30
+## [3.0.1](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v3.0.1) - 2022-12-30
 
 ### Fixed
 
-- Fix wrong URL when starting a meeting as a host ([issue #2](https://github.com/EdoardoTosin/ZooMeeting-Redirector/issues/2)).
+- Fix wrong URL when starting a meeting as a host ([issue #2](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/issues/2)).
 
-## [3.0.0](https://github.com/EdoardoTosin/ZooMeeting-Redirector/tree/v3.0.0) - 2022-02-15
+## [3.0.0](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v3.0.0) - 2022-02-15
 
 ### Changed
 
