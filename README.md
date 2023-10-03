@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom-meetings">
+  <a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom">
     <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
   <a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
     <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img alt="Firefox users" src="https://img.shields.io/amo/users/silly-redirect-for-zoom-meetings?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
+  <img alt="Firefox users" src="https://img.shields.io/amo/users/silly-redirect-for-zoom?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
   <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/dammgkhaofolinipgnjjiocadmmhidch?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge">
   <img alt="Edge users" src="https://img.shields.io/badge/dynamic/json?label=Edge%20Users&style=for-the-badge&logo=microsoft-edge&query=activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn">
 </p>
@@ -58,8 +58,8 @@ According to system settings the extension's dashboard has the corresponding the
     </thead>
     <tbody align="center">
         <tr>
-          <td><a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom-meetings">
-         <img alt="Mozilla Firefox" src="https://img.shields.io/amo/v/silly-redirect-for-zoom-meetings?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
+          <td><a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom">
+         <img alt="Mozilla Firefox" src="https://img.shields.io/amo/v/silly-redirect-for-zoom?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
           <td><a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
           <img alt="Chrome" src="https://img.shields.io/chrome-web-store/v/dammgkhaofolinipgnjjiocadmmhidch?label=chrome&logo=google-chrome&style=for-the-badge"></a></td>
           <td><a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
