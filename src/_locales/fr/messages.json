@@ -1,10 +1,10 @@
 {
 	"name": {
-		"message": "ZooMeeting Redirector",
+		"message": "Silly Redirect for Zoom Meetings",
 		"description": "Name of the extension."
 	},
 	"short_name": {
-		"message": "ZooM-WC Red",
+		"message": "Redirect for Zoom",
 		"description": "Shorted Name of the extension."
 	},
 	"description": {
@@ -12,7 +12,7 @@
 		"description": "Description of the extension."
 	},
 	"popup_title": {
-		"message": "ZooMeeting\nRedirector",
+		"message": "Silly Redirect\nfor Zoom Meetings",
 		"description": "Title of extension inside the popup."
 	},
 	"enabled": {

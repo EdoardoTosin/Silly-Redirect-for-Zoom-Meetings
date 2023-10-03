@@ -2,12 +2,7 @@
 
 ## Supported Versions
 
-Versions currently being supported with security updates.
-
-| Version | Supported |
-| ------- | --------- |
-| [3.1.0](https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases/tag/v3.0.1) | :white_check_mark: |
-| [<=3.0.1](https://github.com/EdoardoTosin/ZooMeeting-Redirector/releases/tag/v3.0.0) | :x: |
+Patches will be released to the latest major version.
 
 ## Reporting a Vulnerability
 
