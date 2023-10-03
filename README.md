@@ -136,7 +136,7 @@ Silly Redirect for Zoom Meetings does **NOT** collect any data of any kind.
 ## Translation
 
 Locales are hosted using [Crowdin](https://crowdin.com) to help the process of translation. To translate it, please follow these steps:
-* Sign up on [Crowdin](https://accounts.crowdin.com/register) and Join the project [here](https://crowdin.com/project/silly-redirect-for-zoom-meetings).
+* Sign up on [Crowdin](https://accounts.crowdin.com/register) and Join the project [here](https://crowdin.com/project/zoomeeting-redirector).
 * Make sure your locale exists there, if it does not exist, open an issue [here](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/issues) on Github and I'll add the language option.
 * Get familiar with the Crowdin translation UI, as you will need to use it to translate JSON files.
 
