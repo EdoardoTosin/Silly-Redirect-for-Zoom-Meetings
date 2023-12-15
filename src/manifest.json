@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "__MSG_name__",
 	"short_name": "__MSG_short_name__",
-	"version": "4.0.0",
+	"version": "4.1.0",
 	"author": "Edoardo Tosin",
 	"description": "__MSG_description__",
 	"homepage_url": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings",
@@ -60,6 +60,9 @@
 		"gecko": {
 			"id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
 			"strict_min_version": "79.0"
+		},
+		"gecko_android": {
+			"strict_min_version": "113.0"
 		}
 	}
 }
