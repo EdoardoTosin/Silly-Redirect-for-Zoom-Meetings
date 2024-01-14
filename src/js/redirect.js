@@ -3,7 +3,7 @@ var storage = chrome.storage.sync || chrome.storage.local;
 // Replace */j/* or */s/* in the url with */wc/join/* or */wc/*/start/
 (function redirect() {
     storage.get("toggle").then(function(items) {
-        if (items.toggle === "true") {
+        if (items.toggle == true) {
             const pathParts = window.location.pathname.split('/');
             const secondPart = pathParts[1];
             if (secondPart !== null && ['j', 's'].includes(secondPart)) {

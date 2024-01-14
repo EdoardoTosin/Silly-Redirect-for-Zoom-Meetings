@@ -1,40 +1,37 @@
 var storage = chrome.storage.sync || chrome.storage.local;
 
-// Change Icon, Toggle and chrome.storage to true/on.
-function setRedirectorOn() {
-    storage.set({
-        'toggle': "true"
-    });
-    document.getElementsByClassName("switch")[0].title = chrome.i18n.getMessage("enabled");
-    document.getElementById('toggle').setAttribute("checked", "");
-    chrome.browserAction.setIcon({
-        path: {
-            "16": "../icons/16x16.png",
-            "32": "../icons/32x32.png",
-            "48": "../icons/48x48.png",
-            "64": "../icons/64x64.png",
-            "128": "../icons/128x128.png",
-            "256": "../icons/256x256.png"
-        }
-    });
-};
+function setRedirector(state) {
+    const toggleState = state ? true : false;
+    const title = state ? chrome.i18n.getMessage("enabled") : chrome.i18n.getMessage("disabled");
+    const checked = state ? "" : null;
+    const iconPaths = state ? {
+        "16": "../icons/16x16.png",
+        "32": "../icons/32x32.png",
+        "48": "../icons/48x48.png",
+        "64": "../icons/64x64.png",
+        "128": "../icons/128x128.png",
+        "256": "../icons/256x256.png"
+    } : {
+        "16": "../icons/16x16-off.png",
+        "32": "../icons/32x32-off.png",
+        "48": "../icons/48x48-off.png",
+        "64": "../icons/64x64-off.png",
+        "128": "../icons/128x128-off.png",
+        "256": "../icons/256x256-off.png"
+    };
 
-// Change Icon, Toggle and chrome.storage to false/off.
-function setRedirectorOff() {
     storage.set({
-        'toggle': "false"
+        'toggle': toggleState
     });
-    document.getElementsByClassName("switch")[0].title = chrome.i18n.getMessage("disabled");
-    document.getElementById('toggle').removeAttribute("checked");
+    document.getElementsByClassName("switch")[0].title = title;
+    let toggleElement = document.getElementById('toggle');
+    if (state) {
+        toggleElement.setAttribute("checked", "");
+    } else {
+        toggleElement.removeAttribute("checked");
+    }
     chrome.browserAction.setIcon({
-        path: {
-            "16": "../icons/16x16-off.png",
-            "32": "../icons/32x32-off.png",
-            "48": "../icons/48x48-off.png",
-            "64": "../icons/64x64-off.png",
-            "128": "../icons/128x128-off.png",
-            "256": "../icons/256x256-off.png"
-        }
+        path: iconPaths
     });
 };
 
@@ -42,34 +39,23 @@ function setRedirectorOff() {
 chrome.storage.sync.get('toggle', function(items) {
     var toggle = items.toggle;
     if (typeof toggle === "undefined") {
-        setRedirectorOn();
+        setRedirector(true);
     }
 });
 
 // On dashboard load it checks chrome.storage toggle value and set the switch button and icon set accordingly.
 document.body.onload = function() {
     storage.get("toggle", function(items) {
-        //console.log('Load to: ' + items.toggle);
-        if (items.toggle != 'undefined' && items.toggle == "false")
-            setRedirectorOff();
-        else {
-            setRedirectorOn();
-        }
+        const state = items.toggle != false;
+        console.log('Loaded to: ' + state);
+        setRedirector(state);
     });
 }
 
 // Change chrome.storage "toggle" value and extension icon when checkbox change state.
 function saveOption() {
-    if (document.getElementById('toggle').checked) {
-        setRedirectorOn();
-    } else {
-        setRedirectorOff();
-    }
-    /*
-    storage.get("toggle", function(items) {
-    console.log('Set to: ' + items.toggle);
-    });
-    */
+    const state = document.getElementById('toggle').checked ? true : false;
+    setRedirector(state);
 };
 
 // If toggle change state it calls saveOption function.
