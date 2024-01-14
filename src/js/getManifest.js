@@ -1,54 +1,62 @@
-const homePage_URL = chrome.runtime.getManifest().homepage_url;
-const addonVersion = "v" + chrome.runtime.getManifest().version;
-const author = chrome.runtime.getManifest().author;
+const manifest = chrome.runtime.getManifest();
+const homePage_URL = manifest.homepage_url;
+const addonVersion = "v" + manifest.version;
+const author = manifest.author;
 const changelog_URL = homePage_URL + "/blob/main/CHANGELOG.md";
 const issue_tracker_URL = homePage_URL + "/issues";
 
 // Load _locales and manifest data into popup.html when opened.
 function loadPopup() {
-
-    function setLocaleProperty(selector, prop, msg) {
-        document.querySelector(selector)[prop] = chrome.i18n.getMessage(msg);
+    function setLocaleProperty(element, prop, msg) {
+        element[prop] = chrome.i18n.getMessage(msg);
     }
 
-    function setProperty(selector, prop, msg) {
-        document.querySelector(selector)[prop] = msg;
+    function setProperty(element, prop, msg) {
+        element[prop] = msg;
     }
+
+    let elements = {
+        title: document.querySelector('title'),
+        authorMeta: document.querySelector("meta[name='author']"),
+        descriptionMeta: document.querySelector("meta[name='description']"),
+        titleElement: document.querySelector('#title'),
+        changelog: document.querySelector('#changelog'),
+        issueTracker: document.querySelector('#issue_tracker'),
+        sourceCode: document.querySelector('#source_code'),
+        addonVersion: document.querySelector('#addon_version')
+    };
 
     // Set head title
-    setLocaleProperty('title', 'innerText', 'name');
+    setLocaleProperty(elements.title, 'innerText', 'name');
 
     // Set meta tags
-    setProperty("meta[name='author']", 'content', author);
-    setLocaleProperty("meta[name='description']", 'content', 'description');
+    setProperty(elements.authorMeta, 'content', author);
+    setLocaleProperty(elements.descriptionMeta, 'content', 'description');
 
     // Set title element
-    setLocaleProperty('#title', 'innerText', 'popup_title');
+    setLocaleProperty(elements.titleElement, 'innerText', 'popup_title');
 
     // Set changelog element
-    setLocaleProperty('#changelog', 'innerText', 'popup_changelog');
-    setProperty('#changelog', 'href', changelog_URL);
-    setProperty('#changelog', 'title', changelog_URL);
+    setLocaleProperty(elements.changelog, 'innerText', 'popup_changelog');
+    setProperty(elements.changelog, 'href', changelog_URL);
+    setProperty(elements.changelog, 'title', changelog_URL);
 
     // Set issue_tracker element
-    setLocaleProperty('#issue_tracker', 'innerText', 'popup_issue_tracker');
-    setProperty('#issue_tracker', 'href', issue_tracker_URL);
-    setProperty('#issue_tracker', 'title', issue_tracker_URL);
+    setLocaleProperty(elements.issueTracker, 'innerText', 'popup_issue_tracker');
+    setProperty(elements.issueTracker, 'href', issue_tracker_URL);
+    setProperty(elements.issueTracker, 'title', issue_tracker_URL);
 
     // Set source_code element
-    setLocaleProperty('#source_code', 'innerText', 'popup_source_code');
-    setProperty('#source_code', 'href', homePage_URL);
-    setProperty('#source_code', 'title', homePage_URL);
+    setLocaleProperty(elements.sourceCode, 'innerText', 'popup_source_code');
+    setProperty(elements.sourceCode, 'href', homePage_URL);
+    setProperty(elements.sourceCode, 'title', homePage_URL);
 
     // Set addon_version element
-    setLocaleProperty('#addon_version', 'title', 'popup_addon_version');
-    setProperty('#addon_version', 'innerText', addonVersion);
-
+    setLocaleProperty(elements.addonVersion, 'title', 'popup_addon_version');
+    setProperty(elements.addonVersion, 'innerText', addonVersion);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    loadPopup();
-});
+document.addEventListener("DOMContentLoaded", loadPopup);
 
 // Open clickable links
 window.addEventListener("click", function(e) {
