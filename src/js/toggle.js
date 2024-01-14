@@ -30,7 +30,7 @@ function setRedirector(state) {
     } else {
         toggleElement.removeAttribute("checked");
     }
-    chrome.browserAction.setIcon({
+    chrome.action.setIcon({
         path: iconPaths
     });
 };
