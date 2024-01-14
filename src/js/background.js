@@ -47,7 +47,6 @@ chrome.storage.sync.get('toggle', function(items) {
 document.body.onload = function() {
     storage.get("toggle", function(items) {
         const state = items.toggle != false;
-        console.log('Loaded to: ' + state);
         setRedirector(state);
     });
 }
