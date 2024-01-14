@@ -1,0 +1,26 @@
+{
+	"name": "Silly Redirect for Zoom Meetings",
+	"logo": "https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/src/icons/256x256.png",
+	"noHeader": true,
+	"favicon": "https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/src/icons/256x256.png",
+	"darkTheme": true,
+	"dist": "docs",
+	"description": "A web extension that redirects zoom meetings to the web client version.",
+	"repo": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings",
+	"remoteStyles": [
+		"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans",
+		"https://fonts.googleapis.com/css2?family=Fira+Code"
+	],
+	"styles": "assets/styles.css",
+	"meta": [
+		{ "name": "author", "content": "Edoardo Tosin" },
+		{ "property": "og:image", "content": "https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/assets/social-preview/social-preview.png" },
+		{ "property": "og:url", "content": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings" },
+		{ "property": "og:site_name", "content": "Silly Redirect for Zoom Meetings" },
+		{ "name": "twitter:card", "content": "summary_large_image" },
+		{ "name": "twitter:image:alt", "content": "Silly Redirect for Zoom Meetings" },
+		{ "itemprop": "name", "content": "Silly Redirect for Zoom Meetings" },
+		{ "itemprop": "description", "content": "A web extension that redirects zoom meetings to the web client version." },
+		{ "itemprop": "image", "content": "" }
+	]
+}
