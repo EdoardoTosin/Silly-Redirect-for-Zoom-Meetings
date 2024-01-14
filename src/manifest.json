@@ -45,7 +45,10 @@
     "gecko": {
       "id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
       "strict_min_version": "79.0"
-    }
+    },
+	"gecko_android": {
+		"strict_min_version": "113.0"
+	}
   },
   "action": {
     "browser_style": true,
