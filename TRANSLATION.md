@@ -1,41 +1,72 @@
-# Translation Progress
+# Translation Guide
 
-[Crowdin Project](https://crowdin.com/project/zoomeeting-redirector)
+Welcome to the translation guide for this project! This guide helps you translate the project's content into different languages. The default language is English, located in the "en" folder within `src/_locales`.
 
-## Chart
+## Getting Started
 
-![Translation chart](https://badges.awesome-crowdin.com/translation-14914365-558725.png)
+To begin, clone the repository to your local machine using the following command:
 
-## Table
+```bash
+git clone https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings
+```
 
-|Complete|Language|Translation|Proofreading|
-|:----|:----|:----|:----|
-|❌|Amharic|![ca translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ca&style=for-the-badge&logo=crowdin&query=%24.progress.1.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![ca proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ca&style=for-the-badge&logo=crowdin&query=%24.progress.1.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Arabic|![ar translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ar&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![ar proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ar&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Chinese (China)|![zh-CN translation](https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress.28.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![zh-CN proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress.28.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Croatian|![hr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=hr&style=for-the-badge&logo=crowdin&query=%24.progress.10.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![hr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=hr&style=for-the-badge&logo=crowdin&query=%24.progress.10.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Czech|![cs translation](https://img.shields.io/badge/dynamic/json?color=blue&label=cs&style=for-the-badge&logo=crowdin&query=%24.progress.2.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![cs proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=cs&style=for-the-badge&logo=crowdin&query=%24.progress.2.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Dutch|![nl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=nl&style=for-the-badge&logo=crowdin&query=%24.progress.16.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![nl proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=nl&style=for-the-badge&logo=crowdin&query=%24.progress.16.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|✅|English|![en translation](https://img.shields.io/badge/dynamic/json?color=blue&label=en&style=for-the-badge&logo=crowdin&query=%24.progress.5.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![en proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=en&style=for-the-badge&logo=crowdin&query=%24.progress.5.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Finnish|![fi translation](https://img.shields.io/badge/dynamic/json?color=blue&label=fi&style=for-the-badge&logo=crowdin&query=%24.progress.7.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![fi proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=fi&style=for-the-badge&logo=crowdin&query=%24.progress.7.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|✅|French|![fr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress.8.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![fr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress.8.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|German|![de translation](https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=for-the-badge&logo=crowdin&query=%24.progress.3.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![de proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=de&style=for-the-badge&logo=crowdin&query=%24.progress.3.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Greek|![el translation](https://img.shields.io/badge/dynamic/json?color=blue&label=el&style=for-the-badge&logo=crowdin&query=%24.progress.4.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![el proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=el&style=for-the-badge&logo=crowdin&query=%24.progress.4.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Hebrew|![he translation](https://img.shields.io/badge/dynamic/json?color=blue&label=he&style=for-the-badge&logo=crowdin&query=%24.progress.9.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![he proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=he&style=for-the-badge&logo=crowdin&query=%24.progress.9.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Hungarian|![hu translation](https://img.shields.io/badge/dynamic/json?color=blue&label=hu&style=for-the-badge&logo=crowdin&query=%24.progress.11.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![hu proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=hu&style=for-the-badge&logo=crowdin&query=%24.progress.11.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Indonesian|![id translation](https://img.shields.io/badge/dynamic/json?color=blue&label=id&style=for-the-badge&logo=crowdin&query=%24.progress.12.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![id proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=id&style=for-the-badge&logo=crowdin&query=%24.progress.12.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|✅|Italian|![it translation](https://img.shields.io/badge/dynamic/json?color=blue&label=it&style=for-the-badge&logo=crowdin&query=%24.progress.13.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![it proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=it&style=for-the-badge&logo=crowdin&query=%24.progress.13.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Japanese|![ja translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress.14.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![ja proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress.14.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Korean|![ko translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress.15.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![ko proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress.15.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Norwegian|![no translation](https://img.shields.io/badge/dynamic/json?color=blue&label=no&style=for-the-badge&logo=crowdin&query=%24.progress.17.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![no proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=no&style=for-the-badge&logo=crowdin&query=%24.progress.17.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Polish|![pl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pl&style=for-the-badge&logo=crowdin&query=%24.progress.18.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![pl proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pl&style=for-the-badge&logo=crowdin&query=%24.progress.18.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Portuguese (Brazil)|![pt-PT translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress.20.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![pt-PT proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress.20.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Portuguese (Portugal)|![pt-BR translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pt-BR&style=for-the-badge&logo=crowdin&query=%24.progress.19.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![pt-BR proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pt-BR&style=for-the-badge&logo=crowdin&query=%24.progress.19.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|✅|Romanian|![ro translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ro&style=for-the-badge&logo=crowdin&query=%24.progress.21.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![ro proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ro&style=for-the-badge&logo=crowdin&query=%24.progress.21.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Russian|![ru translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress.22.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![ru proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress.22.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Spanish|![es-ES translation](https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress.6.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![es-ES proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress.6.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Swedish|![sv-SE translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sv-SE&style=for-the-badge&logo=crowdin&query=%24.progress.23.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![sv-SE proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sv-SE&style=for-the-badge&logo=crowdin&query=%24.progress.23.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Thai|![th translation](https://img.shields.io/badge/dynamic/json?color=blue&label=th&style=for-the-badge&logo=crowdin&query=%24.progress.24.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![th proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=th&style=for-the-badge&logo=crowdin&query=%24.progress.24.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Turkish|![tr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=tr&style=for-the-badge&logo=crowdin&query=%24.progress.25.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![tr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=tr&style=for-the-badge&logo=crowdin&query=%24.progress.25.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Ukrainian|![uk translation](https://img.shields.io/badge/dynamic/json?color=blue&label=uk&style=for-the-badge&logo=crowdin&query=%24.progress.26.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![uk proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=uk&style=for-the-badge&logo=crowdin&query=%24.progress.26.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
-|❌|Vietnamese|![vi translation](https://img.shields.io/badge/dynamic/json?color=blue&label=vi&style=for-the-badge&logo=crowdin&query=%24.progress.27.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|![vi proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=vi&style=for-the-badge&logo=crowdin&query=%24.progress.27.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14914365-558725.json)|
+Next, create a new branch called "l10n_main". You can do this using the following command:
+
+```bash
+git checkout -b l10n_main
+```
+
+## Translating Content
+
+Great! Now, you can start translating. Head over to the `src/_locales` directory. Find the folder for the language you're translating to (like "fr" for French or "es" for Spanish). Open the `messages.json` file in this folder. Replace the English text with your translations. Remember, the keys must stay the same as in the English file.
+
+## Testing Your Translation
+
+Lastly, it's crucial to test your translations. Install the code as a browser extension in Firefox or Chrome to check everything is working correctly. Remember to test in both browsers to ensure compatibility.
+
+### Firefox
+
+1. Open the `about:debugging` page in Firefox.
+2. Click the "This Firefox" option.
+3. Click the "Load Temporary Add-on" button.
+4. Select the `manifest.json` file, which is found in the `src` folder of your local repository.
+
+The extension now installs and remains installed until you restart Firefox. Alternatively, you can run the extension from the command line using the `web-ext` tool.
+
+After making changes to the extension's files, click the "Reload" button in the Debugging Tools panel to apply the changes and see them in effect.
+
+### Chrome
+
+1. Open the Extensions page in Chrome (`chrome://extensions`).
+2. Enable Developer mode by clicking the toggle switch in the top right corner.
+3. Locate the 'Load unpacked' button and click on it. Then, navigate to the `src` folder in your local repository and select it.
+
+Your extension is now installed and active in Chrome. Any changes you make to the extension's files will automatically be reflected in the browser.
+
+After making changes to the extension's files, click the "Reload" icon (circular arrow) in the Extensions page to apply the changes and see them in effect.
+
+## Saving Your Work
+
+Once you've finished translating, stage your changes with the following command:
+
+```bash
+git add .
+```
+
+Then, commit your changes with a message describing what you did:
+
+```bash
+git commit -m "Added [language] translation"
+```
+
+Finally, push your changes to the remote repository with the following command:
+
+```bash
+git push origin l10n_main
+```
+
+Go to the GitHub page for the repository and switch to the "l10n_main" branch. Click on "New pull request", fill in the title and description of the pull request, and submit it. Your title could be something like "Added [language] translation", and your description should explain what changes you made and why.
+
+## Submitting Your Translation
+
+Now, head over to the project's webpage on GitHub and switch to the "l10n_main" branch. Click on "New pull request", fill in the title and description of the pull request, and hit submit. Your title could be something like "Added [language] translation", and your description should explain what changes you made and why.
