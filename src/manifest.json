@@ -1,8 +1,8 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "__MSG_name__",
 	"short_name": "__MSG_short_name__",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"author": "Edoardo Tosin",
 	"description": "__MSG_description__",
 	"homepage_url": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings",
@@ -17,12 +17,12 @@
 	"permissions": [
 		"activeTab",
 		"storage",
+		"tabs"
+	],
+	"host_permissions": [
 		"*://*.zoom.us/*",
 		"*://*.zoomgov.com/*"
 	],
-	"background": {
-		"page": "html/popup.html"
-	},
 	"content_scripts": [
 		{
 			"exclude_matches": [
@@ -39,12 +39,11 @@
 				"js/redirect.js",
 				"js/getManifest.js"
 			],
-			"run_at": "document_idle",
+			"run_at": "document_start",
 			"all_frames": false
 		}
 	],
-	"browser_action": {
-		"browser_style": true,
+	"action": {
 		"default_icon": {
 			"16": "icons/16x16.png",
 			"32": "icons/32x32.png",
@@ -55,6 +54,9 @@
 		},
 		"default_title": "__MSG_name__",
 		"default_popup": "html/popup.html"
+	},
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'"
 	},
 	"browser_specific_settings": {
 		"gecko": {

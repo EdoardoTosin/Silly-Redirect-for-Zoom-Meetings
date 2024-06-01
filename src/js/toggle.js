@@ -1,12 +1,21 @@
-var storage = chrome.storage.sync;
-if (!storage) storage = chrome.storage.local;
+let storage = chrome.storage.sync || chrome.storage.local;
 
-// Change Icon, Toggle and chrome.storage to true/on.
-function setRedirectorOn(){
-  storage.set({'toggle': "true"});
-  document.getElementsByClassName("switch")[0].title = chrome.i18n.getMessage("enabled");
-  document.getElementById('toggle').setAttribute("checked","");
-  chrome.browserAction.setIcon({
+function setRedirectorOn() {
+  storage.set({ 'toggle': "true" });
+  let switchElement = document.querySelector(".switch");
+  let toggleElement = document.getElementById('toggle');
+  if (switchElement) {
+    switchElement.title = chrome.i18n.getMessage("enabled");
+  } else {
+    console.error("Switch element not found");
+  }
+  if (toggleElement) {
+    toggleElement.setAttribute("checked", "");
+  } else {
+    console.error("Toggle element not found");
+  }
+  if (chrome.action && chrome.action.setIcon) {
+    chrome.action.setIcon({
       path: {
         "16": "../icons/16x16.png",
         "32": "../icons/32x32.png",
@@ -15,15 +24,28 @@ function setRedirectorOn(){
         "128": "../icons/128x128.png",
         "256": "../icons/256x256.png"
       }
-  });
-};
+    });
+  } else {
+    console.error("chrome.action.setIcon is not available");
+  }
+}
 
-// Change Icon, Toggle and chrome.storage to false/off.
-function setRedirectorOff(){
-  storage.set({'toggle': "false"});
-  document.getElementsByClassName("switch")[0].title = chrome.i18n.getMessage("disabled");
-  document.getElementById('toggle').removeAttribute("checked");
-  chrome.browserAction.setIcon({
+function setRedirectorOff() {
+  storage.set({ 'toggle': "false" });
+  let switchElement = document.querySelector(".switch");
+  let toggleElement = document.getElementById('toggle');
+  if (switchElement) {
+    switchElement.title = chrome.i18n.getMessage("disabled");
+  } else {
+    console.error("Switch element not found");
+  }
+  if (toggleElement) {
+    toggleElement.removeAttribute("checked");
+  } else {
+    console.error("Toggle element not found");
+  }
+  if (chrome.action && chrome.action.setIcon) {
+    chrome.action.setIcon({
       path: {
         "16": "../icons/16x16-off.png",
         "32": "../icons/32x32-off.png",
@@ -32,45 +54,46 @@ function setRedirectorOff(){
         "128": "../icons/128x128-off.png",
         "256": "../icons/256x256-off.png"
       }
-  });
-};
+    });
+  } else {
+    console.error("chrome.action.setIcon is not available");
+  }
+}
 
-// If toggle is not set, it creates it and load icon set.
-chrome.storage.sync.get('toggle', function(items) {
-  var toggle = items.toggle;
-  if (typeof toggle === "undefined") {
+storage.get('toggle', function (items) {
+  if (typeof items.toggle === "undefined") {
     setRedirectorOn();
   }
 });
 
-// On dashboard load it checks chrome.storage toggle value and set the switch button and icon set accordingly.
-document.body.onload = function() {
-  storage.get("toggle", function(items) {
-    //console.log('Load to: ' + items.toggle);
-    if (items.toggle!='undefined' && items.toggle=="false")
+document.addEventListener('DOMContentLoaded', function () {
+  storage.get("toggle", function (items) {
+    if (items.toggle !== 'undefined' && items.toggle === "false") {
       setRedirectorOff();
-    else {
+    } else {
       setRedirectorOn();
     }
   });
+});
+
+function saveOption() {
+  let toggleElement = document.getElementById('toggle');
+  if (toggleElement) {
+    if (toggleElement.checked) {
+      setRedirectorOn();
+    } else {
+      setRedirectorOff();
+    }
+  } else {
+    console.error("Toggle element not found");
+  }
 }
 
-// Change chrome.storage "toggle" value and extension icon when checkbox change state.
-function saveOption() {
-  if (document.getElementById('toggle').checked){
-    setRedirectorOn();
-  }
-  else{
-    setRedirectorOff();
-  }
-  /*
-  storage.get("toggle", function(items) {
-  console.log('Set to: ' + items.toggle);
-  });
-  */
-};
-
-// If toggle change state it calls saveOption function.
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('#toggle').addEventListener('change', saveOption);
+  let toggleElement = document.getElementById('toggle');
+  if (toggleElement) {
+    toggleElement.addEventListener('change', saveOption);
+  } else {
+    console.error("Toggle element not found");
+  }
 });

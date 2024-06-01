@@ -1,58 +1,59 @@
-const homePage_URL = chrome.runtime.getManifest().homepage_url;
-const addonVersion = "v" + chrome.runtime.getManifest().version;
-const author = chrome.runtime.getManifest().author;
-const changelog_URL = homePage_URL + "/blob/main/CHANGELOG.md";
-const issue_tracker_URL = homePage_URL + "/issues";
+// Get manifest details
+const { homepage_url: homePage_URL, version, author } = chrome.runtime.getManifest();
+const addonVersion = `v${version}`;
+const changelog_URL = `${homePage_URL}/blob/main/CHANGELOG.md`;
+const issue_tracker_URL = `${homePage_URL}/issues`;
 
-// Load _locales and manifest data into popup.html when opened.
+// Load _locales and manifest data into popup.html when opened
 function loadPopup() {
-	
-	function setLocaleProperty(selector, prop, msg) {
-		document.querySelector(selector)[prop] = chrome.i18n.getMessage(msg);
-	}
-	
-	function setProperty(selector, prop, msg) {
-		document.querySelector(selector)[prop] = msg;
-	}
-	
-	// Set head title
-	setLocaleProperty('title', 'innerText', 'name');
-	
-	// Set meta tags
-	setProperty("meta[name='author']", 'content', author);
-	setLocaleProperty("meta[name='description']", 'content', 'description');
-	
-	// Set title element
-	setLocaleProperty('#title', 'innerText', 'popup_title');
-	
-	// Set changelog element
-	setLocaleProperty('#changelog', 'innerText', 'popup_changelog');
-	setProperty('#changelog', 'href', changelog_URL);
-	setProperty('#changelog', 'title', changelog_URL);
-	
-	// Set issue_tracker element
-	setLocaleProperty('#issue_tracker', 'innerText', 'popup_issue_tracker');
-	setProperty('#issue_tracker', 'href', issue_tracker_URL);
-	setProperty('#issue_tracker', 'title', issue_tracker_URL);
-	
-	// Set source_code element
-	setLocaleProperty('#source_code', 'innerText', 'popup_source_code');
-	setProperty('#source_code', 'href', homePage_URL);
-	setProperty('#source_code', 'title', homePage_URL);
-	
-	// Set addon_version element
-	setLocaleProperty('#addon_version', 'title', 'popup_addon_version');
-	setProperty('#addon_version', 'innerText', addonVersion);
-	
+    // Helper function to set properties
+    const setProperty = (selector, prop, value) => {
+        const element = document.querySelector(selector);
+        if (element) element[prop] = value;
+    };
+
+    // Helper function to set localized properties
+    const setLocaleProperty = (selector, prop, msg) => {
+        setProperty(selector, prop, chrome.i18n.getMessage(msg));
+    };
+
+    // Set head title
+    setLocaleProperty('title', 'innerText', 'name');
+
+    // Set meta tags
+    setProperty("meta[name='author']", 'content', author);
+    setLocaleProperty("meta[name='description']", 'content', 'description');
+
+    // Set elements
+    const elements = [
+        { selector: '#title', prop: 'innerText', msg: 'popup_title' },
+        { selector: '#changelog', prop: 'innerText', msg: 'popup_changelog' },
+        { selector: '#changelog', prop: 'href', value: changelog_URL },
+        { selector: '#changelog', prop: 'title', value: changelog_URL },
+        { selector: '#issue_tracker', prop: 'innerText', msg: 'popup_issue_tracker' },
+        { selector: '#issue_tracker', prop: 'href', value: issue_tracker_URL },
+        { selector: '#issue_tracker', prop: 'title', value: issue_tracker_URL },
+        { selector: '#source_code', prop: 'innerText', msg: 'popup_source_code' },
+        { selector: '#source_code', prop: 'href', value: homePage_URL },
+        { selector: '#source_code', prop: 'title', value: homePage_URL },
+        { selector: '#addon_version', prop: 'title', msg: 'popup_addon_version' },
+        { selector: '#addon_version', prop: 'innerText', value: addonVersion }
+    ];
+
+    elements.forEach(({ selector, prop, msg, value }) => {
+        if (msg) {
+            setLocaleProperty(selector, prop, msg);
+        } else {
+            setProperty(selector, prop, value);
+        }
+    });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-	loadPopup();
-});
+document.addEventListener("DOMContentLoaded", loadPopup);
 
-// Open clickable links
-window.addEventListener("click", function (e) {
-    if (e.target.href !== undefined) {
+// Open clickable links in a new tab
+window.addEventListener("click", (e) => {
+    if (e.target.href) {
         chrome.tabs.create({ url: e.target.href });
         window.close();
     }
