@@ -113,9 +113,11 @@ https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef60
 
 https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L66-L69
 
-- ``activeTab`` is necessary to be able to open hyperlinks in the dashboard.
-- ``storage`` is used to store the status of the slide checkbox.  
-- ``*://*.zoom.us/*`` and ``*://*.zoomgov.com/*`` are necessary to get the url and modify it to redirect to the web client page.
+| Permission | Purpose |
+|:----:|:----:|
+| `activeTab` | Used to open hyperlinks in the dashboard |
+| `storage` | Used to store the status of the slide checkbox |
+| `*://*.zoom.us/*` and `*://*.zoomgov.com/*` | Used to run the extension only when a page matches one of these URLs |
 
 ## Translation
 
