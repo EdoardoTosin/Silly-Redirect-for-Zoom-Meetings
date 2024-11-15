@@ -105,27 +105,13 @@ Silly Redirect for Zoom Meetings does **NOT** collect any data of any kind.
 
 **Manifest V2** ([main](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main) branch)
 
-``` json
-"permissions": [
-  "activeTab",
-  "storage",
-  "*://*.zoom.us/*",
-  "*://*.zoomgov.com/*"
-],
-```
+https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/452ad56b6cab7e37dc38be18c635ca0d93dd1341/src/manifest.json#L17-L22
 
 **Manifest V3** ([manifest-v3](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/manifest-v3) branch)
 
-``` json
-"permissions": [
-    "activeTab",
-    "storage"
-],
-"host_permissions": [
-    "*://*.zoom.us/*",
-    "*://*.zoomgov.com/*"
-]
-```
+https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L17-L20
+
+https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L66-L69
 
 - ``activeTab`` is necessary to be able to open hyperlinks in the dashboard.
 - ``storage`` is used to store the status of the slide checkbox.  
