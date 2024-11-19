@@ -7,11 +7,11 @@
 
 <p align="center">
   <a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom">
-    <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/be6894b96e1b46bdcf1b10e6e324fc856e3e7439/assets/badges/firefox.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
   <a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
-    <img src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/refs/heads/main/assets/badges/chrome.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
-    <img src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get Silly Redirect for Zoom Meetings for Microsoft Edge" height=80px></a>
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/refs/heads/main/assets/badges/edge.png" alt="Get Silly Redirect for Zoom Meetings for Microsoft Edge" height=80px></a>
 </p>
 
 <p align="center">

@@ -9,13 +9,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <meta name="description" content="A web extension that redirects zoom meetings to the web client version.">
+    <meta name="description" content="A browser extension that effortlessly redirects your Zoom meetings to the safer web client, enhancing your online collaboration experience.">
     <meta name="image" content="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/src/icons/256x256.png">
     <meta itemprop="name" content="Silly Redirect for Zoom Meetings">
     <meta itemprop="description" content="A web extension that redirects zoom meetings to the web client version.">
     <meta itemprop="image" content="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/src/icons/256x256.png">
     <meta name="og:title" content="Silly Redirect for Zoom Meetings">
-    <meta name="og:description" content="A browser extension that effortlessly redirects your Zoom meetings to the safer web client, enhancing your online collaboration experience. ">
+    <meta name="og:description" content="A browser extension that effortlessly redirects your Zoom meetings to the safer web client, enhancing your online collaboration experience.">
     <meta name="og:url" content="undefined">
     <meta name="og:site_name" content="Silly Redirect for Zoom Meetings">
     <meta name="og:type" content="website">
@@ -36,11 +36,11 @@
 
 <p align="center">
   <a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom">
-    <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/be6894b96e1b46bdcf1b10e6e324fc856e3e7439/assets/badges/firefox.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
   <a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
-    <img src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/refs/heads/main/assets/badges/chrome.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
-    <img src="https://developer.microsoft.com/en-us/microsoft-store/badges/images/English_get-it-from-MS.png" alt="Get Silly Redirect for Zoom Meetings for Microsoft Edge" height=80px></a>
+    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/refs/heads/main/assets/badges/edge.png" alt="Get Silly Redirect for Zoom Meetings for Microsoft Edge" height=80px></a>
 </p>
 
 <p align="center">
@@ -116,24 +116,30 @@ This approach is aimed at leveraging the security features of web browsers and p
 <p>Silly Redirect for Zoom Meetings does <strong>NOT</strong> collect any data of any kind.</p>
 <h2 id="permissions"><a class="header-link" href="#permissions"></a>Permissions</h2>
 <p><strong>Manifest V2</strong> (<a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main">main</a> branch)</p>
-<pre class="hljs"><code><span class="hljs-string">&quot;permissions&quot;</span>: [
-  <span class="hljs-string">&quot;activeTab&quot;</span>,
-  <span class="hljs-string">&quot;storage&quot;</span>,
-  <span class="hljs-string">&quot;*://*.zoom.us/*&quot;</span>,
-  <span class="hljs-string">&quot;*://*.zoomgov.com/*&quot;</span>
-],</code></pre><p><strong>Manifest V3</strong> (<a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/manifest-v3">manifest-v3</a> branch)</p>
-<pre class="hljs"><code><span class="hljs-string">&quot;permissions&quot;</span>: [
-    <span class="hljs-string">&quot;activeTab&quot;</span>,
-    <span class="hljs-string">&quot;storage&quot;</span>
-],
-<span class="hljs-string">&quot;host_permissions&quot;</span>: [
-    <span class="hljs-string">&quot;*://*.zoom.us/*&quot;</span>,
-    <span class="hljs-string">&quot;*://*.zoomgov.com/*&quot;</span>
-]</code></pre><ul class="list">
-<li><code>activeTab</code> is necessary to be able to open hyperlinks in the dashboard.</li>
-<li><code>storage</code> is used to store the status of the slide checkbox.  </li>
-<li><code>*://*.zoom.us/*</code> and <code>*://*.zoomgov.com/*</code> are necessary to get the url and modify it to redirect to the web client page.</li>
-</ul>
+<p><a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/452ad56b6cab7e37dc38be18c635ca0d93dd1341/src/manifest.json#L17-L22">https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/452ad56b6cab7e37dc38be18c635ca0d93dd1341/src/manifest.json#L17-L22</a></p>
+<p><strong>Manifest V3</strong> (<a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/manifest-v3">manifest-v3</a> branch)</p>
+<p><a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L17-L20">https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L17-L20</a></p>
+<p><a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L66-L69">https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L66-L69</a></p>
+<table>
+<thead>
+<tr>
+<th align="center">Permission</th>
+<th align="center">Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>activeTab</code></td>
+<td align="center">Used to open hyperlinks in the dashboard</td>
+</tr>
+<tr>
+<td align="center"><code>storage</code></td>
+<td align="center">Used to store the status of the slide checkbox</td>
+</tr>
+<tr>
+<td align="center"><code>*://*.zoom.us/*</code> and <code>*://*.zoomgov.com/*</code></td>
+<td align="center">Used to run the extension only when a page matches one of these URLs</td>
+</tr>
+</tbody></table>
 <h2 id="translation"><a class="header-link" href="#translation"></a>Translation</h2>
 <p>If you&#39;d like to contribute translations for this project, please refer to the <a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/main/TRANSLATION.md">Translation Guide</a>.</p>
 <h2 id="changelog"><a class="header-link" href="#changelog"></a>Changelog</h2>
