@@ -25,6 +25,19 @@
   <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/total?style=for-the-badge"/>
 </p>
 
+---
+
+## ⚠️ Notice (2025-06-18)
+Microsoft has received a content infringement complaint regarding the use of the **Zoom** trademark in this project's name, **Silly Redirect for Zoom Meetings**, specifically related to its listing on the **Microsoft Edge Add-ons store**.
+
+The complaint was submitted by an agent representing **Zoom Video Communications, Inc.**, citing unauthorized use of their registered trademark. As a result, Microsoft requested that I **remove the extension from the Edge store within one business day**. The extension is now **unpublished** and will remain so for an **indefinite (unknown) amount of time** while I evaluate possible next steps.
+
+This takedown **only affects the Microsoft Edge store listing**. The project's source code and development continue to be available here on GitHub.
+
+This is a personal, independent project and is **not affiliated with or endorsed by Zoom Video Communications, Inc.** I'm currently reviewing the situation and considering renaming the project to comply with trademark guidelines and Microsoft's store policies.
+
+---
+
 ## Summary
 
 A web extension that redirects zoom meetings to the web client version.
