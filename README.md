@@ -26,7 +26,7 @@
 
 ## What It Does
 
-Normally, opening a Zoom meeting link loads a page urging you to download and open the Zoom desktop app, with a small "Join from your browser" link buried below it for anyone who'd rather not install anything. "Silly Redirect for Zoom Meetings" automates clicking that link: it steps in as the page starts loading and sends you straight to the web client, so you land directly in the browser-based meeting instead of the app-download prompt.
+Normally, opening a Zoom meeting link loads a page urging you to download and open the Zoom desktop app, with a "Join from your browser" link for anyone who'd rather not install anything. "Silly Redirect for Zoom Meetings" automates clicking that link: it steps in as the page starts loading and sends you straight to the web client, so you land directly in the browser-based meeting instead of the app-download prompt.
 
 Under the hood this is a URL rewrite, done before Zoom's own page has a chance to render: a link like `https://zoom.us/j/0123456789` becomes `https://zoom.us/wc/join/0123456789`.
 
