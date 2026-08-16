@@ -1,8 +1,7 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "__MSG_name__",
 	"short_name": "__MSG_short_name__",
-	"version": "4.0.0",
 	"author": "Edoardo Tosin",
 	"description": "__MSG_description__",
 	"homepage_url": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings",
@@ -15,36 +14,27 @@
 		"256": "icons/256x256.png"
 	},
 	"permissions": [
-		"activeTab",
-		"storage",
-		"*://*.zoom.us/*",
-		"*://*.zoomgov.com/*"
+		"storage"
 	],
-	"background": {
-		"page": "html/popup.html"
-	},
 	"content_scripts": [
 		{
-			"exclude_matches": [
-				"*://*.zoom.us/wc/join/*",
-				"*://*.zoomgov.com/wc/join/*",
-				"file://*/*"
-			],
 			"matches": [
 				"*://*.zoom.us/*",
 				"*://*.zoomgov.com/*"
 			],
-			"js": [
-				"js/toggle.js",
-				"js/redirect.js",
-				"js/getManifest.js"
+			"exclude_matches": [
+				"*://*.zoom.us/wc/*",
+				"*://*.zoomgov.com/wc/*",
+				"file://*/*"
 			],
-			"run_at": "document_idle",
+			"js": [
+				"js/redirect.js"
+			],
+			"run_at": "document_start",
 			"all_frames": false
 		}
 	],
-	"browser_action": {
-		"browser_style": true,
+	"action": {
 		"default_icon": {
 			"16": "icons/16x16.png",
 			"32": "icons/32x32.png",
@@ -55,11 +45,5 @@
 		},
 		"default_title": "__MSG_name__",
 		"default_popup": "html/popup.html"
-	},
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "{d20bd4aa-d2b5-4834-85e4-f563b48bb560}",
-			"strict_min_version": "79.0"
-		}
 	}
 }

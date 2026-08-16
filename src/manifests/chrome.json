@@ -1,0 +1,9 @@
+{
+	"host_permissions": [
+		"*://*.zoom.us/*",
+		"*://*.zoomgov.com/*"
+	],
+	"background": {
+		"service_worker": "js/background.js"
+	}
+}

@@ -8,7 +8,7 @@
 		"description": "Shorted Name of the extension."
 	},
 	"description": {
-		"message": "Extension qui redirige les réunions vers le client Web.",
+		"message": "Une extension web qui redirige les réunions vers le client web.",
 		"description": "Description of the extension."
 	},
 	"popup_title": {
@@ -28,11 +28,11 @@
 		"description": "Title of the changelog URL."
 	},
 	"popup_issue_tracker": {
-		"message": "Issue Tracker",
+		"message": "Suivi des problèmes",
 		"description": "Title of the issue tracker URL."
 	},
 	"popup_source_code": {
-		"message": "Source Code",
+		"message": "Code source",
 		"description": "Title of the source code URL."
 	},
 	"popup_addon_version": {

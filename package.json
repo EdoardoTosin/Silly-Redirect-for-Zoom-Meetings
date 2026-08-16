@@ -1,0 +1,41 @@
+{
+  "name": "silly-redirect-for-zoom-meetings",
+  "version": "5.0.0",
+  "description": "A web extension that redirects Zoom meetings to the web client",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "homepage": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/issues"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:chrome": "node scripts/build.js chrome",
+    "build:firefox": "node scripts/build.js firefox",
+    "pack": "node scripts/pack.js",
+    "pack:chrome": "node scripts/pack.js chrome",
+    "pack:firefox": "node scripts/pack.js firefox",
+    "lint": "eslint .",
+    "test": "node --test",
+    "docs": "node scripts/docs.js",
+    "all": "npm run lint && npm test && npm run pack && npm run docs",
+    "release": "node scripts/release.js",
+    "preversion": "npm run lint && npm test",
+    "version": "node scripts/sync-version.js",
+    "postversion": "echo Run: git push --follow-tags"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "archiver": "^7.0.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.9.0",
+    "marked": "^18.0.9"
+  }
+}

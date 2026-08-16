@@ -24,11 +24,11 @@
 		"description": "Text info when extension is disabled."
 	},
 	"popup_changelog": {
-		"message": "Jurnal de modificări",
+		"message": "Changelog",
 		"description": "Title of the changelog URL."
 	},
 	"popup_issue_tracker": {
-		"message": "Urmărirea problemelor",
+		"message": "Urmăritor de probleme",
 		"description": "Title of the issue tracker URL."
 	},
 	"popup_source_code": {

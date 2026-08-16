@@ -8,7 +8,7 @@
 		"description": "Shorted Name of the extension."
 	},
 	"description": {
-		"message": "A web extension that redirects meetings to the web client.",
+		"message": "תוסף אינטרנט שמפנה מחדש פגישות ללקוח האינטרנט.",
 		"description": "Description of the extension."
 	},
 	"popup_title": {
@@ -16,11 +16,11 @@
 		"description": "Title of extension inside the popup."
 	},
 	"enabled": {
-		"message": "Enabled",
+		"message": "מופעל",
 		"description": "Text info when extension is enabled."
 	},
 	"disabled": {
-		"message": "Disabled",
+		"message": "מושבת",
 		"description": "Text info when extension is disabled."
 	},
 	"popup_changelog": {
@@ -28,15 +28,15 @@
 		"description": "Title of the changelog URL."
 	},
 	"popup_issue_tracker": {
-		"message": "Issue Tracker",
+		"message": "מעקב בעיות",
 		"description": "Title of the issue tracker URL."
 	},
 	"popup_source_code": {
-		"message": "Source Code",
+		"message": "קוד מקור",
 		"description": "Title of the source code URL."
 	},
 	"popup_addon_version": {
-		"message": "Installed version",
+		"message": "גרסה מותקנת",
 		"description": "Title of element addon_version."
 	}
 }

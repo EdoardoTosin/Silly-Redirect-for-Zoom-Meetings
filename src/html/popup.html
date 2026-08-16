@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title></title>
     <meta charset="utf-8">
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="../js/style.js"></script>
-    <!-- Conditionally either load the light or the dark stylesheet. -->
-    <link rel="stylesheet" href="../css/dark.css" media="(prefers-color-scheme: dark)">
+    <script src="../js/style.js"></script>
+    <link rel="stylesheet" href="../css/dark.css"  media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="../css/light.css" media="(prefers-color-scheme: light)">
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Load version number and page links from manifest.json -->
-    <script type="text/javascript" src="../js/getManifest.js"></script>
+    <script src="../js/popup.js"></script>
 </head>
 
 <body>
     <div class="header">
         <h3 id="title"></h3>
     </div>
-    <script type="text/javascript" src="../js/toggle.js"></script>
-    <input type="checkbox" id="toggle" class="mycheckbox" value="checked" />
+    <input type="checkbox" id="toggle" class="my-checkbox">
     <label for="toggle" class="switch" title=""></label>
     <footer>
         <br>
-        <p>
-            <a class="foot" href="" id="changelog" title=""></a>
-        </p>
-        <p>
-            <a class="foot" href="" id="issue_tracker" title=""></a>
-        </p>
-        <p>
-            <a class="foot" href="" id="source_code" title=""></a>
-        </p>
-        <p id="addon_version" title="Installed version"></p>
+        <p><a class="foot" href="" id="changelog"      title=""></a></p>
+        <p><a class="foot" href="" id="issue-tracker"  title=""></a></p>
+        <p><a class="foot" href="" id="source-code"    title=""></a></p>
+        <p id="addon-version" title=""></p>
     </footer>
 </body>
 

@@ -1,160 +1,98 @@
 <h1 align="center">
   <sub>
-    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/src/icons/256x256.png" height="38" width="38">
+    <img src="src/icons/256x256.png" height="38" width="38">
   </sub>
   Silly Redirect for Zoom Meetings
 </h1>
 
 <p align="center">
   <a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom">
-    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/be6894b96e1b46bdcf1b10e6e324fc856e3e7439/assets/badges/firefox.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
+    <img src="assets/badges/firefox.svg" alt="Get Silly Redirect for Zoom Meetings for Firefox" height=80px></a>
   <a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
-    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/refs/heads/main/assets/badges/chrome.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
-  <a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
-    <img src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/refs/heads/main/assets/badges/edge.png" alt="Get Silly Redirect for Zoom Meetings for Microsoft Edge" height=80px></a>
+    <img src="assets/badges/chrome.png" alt="Get Silly Redirect for Zoom Meetings for Chromium" height=80px></a>
 </p>
 
-<p align="center">
-  <img alt="Firefox users" src="https://img.shields.io/amo/users/silly-redirect-for-zoom?label=Firefox%20Users&style=for-the-badge&logo=firefox"/>
-  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/dammgkhaofolinipgnjjiocadmmhidch?color=007ec6&label=Chrome%20Users&logo=google-chrome&style=for-the-badge">
-  <img alt="Edge users" src="https://img.shields.io/badge/dynamic/json?label=Edge%20Users&style=for-the-badge&logo=microsoft-edge&query=activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn">
-</p>
 <p align="center">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings?label=Latest%20Release&style=for-the-badge">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings?style=for-the-badge"/>
-  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/total?style=for-the-badge"/>
+  <a href="https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/ci.yml?style=for-the-badge"></a>
 </p>
 
----
+> [!NOTE]
+> **Not on the Microsoft Edge Add-ons store**
+>
+> This extension was removed from the Edge Add-ons store on 2025-06-18 following a trademark complaint, with no planned resubmission. Firefox and Chrome are unaffected, and since Edge is Chromium-based, you can still install it there: enable **"Allow extensions from other stores"** in `edge://extensions`, then use the Chrome Web Store link above.
+>
+> This is an independent project with no affiliation with or endorsement by Zoom Video Communications, Inc.
 
-## ⚠️ Notice (2025-06-18)
-Microsoft has received a content infringement complaint regarding the use of the **Zoom** trademark in this project's name, **Silly Redirect for Zoom Meetings**, specifically related to its listing on the **Microsoft Edge Add-ons store**.
+## What It Does
 
-The complaint was submitted by an agent representing **Zoom Video Communications, Inc.**, citing unauthorized use of their registered trademark. As a result, Microsoft requested that I **remove the extension from the Edge store within one business day**. The extension is now **unpublished** and will remain so for an **indefinite (unknown) amount of time** while I evaluate possible next steps.
+Normally, opening a Zoom meeting link loads a page urging you to download and open the Zoom desktop app, with a small "Join from your browser" link buried below it for anyone who'd rather not install anything. "Silly Redirect for Zoom Meetings" automates clicking that link: it steps in as the page starts loading and sends you straight to the web client, so you land directly in the browser-based meeting instead of the app-download prompt.
 
-This takedown **only affects the Microsoft Edge store listing**. The project's source code and development continue to be available here on GitHub.
+Under the hood this is a URL rewrite, done before Zoom's own page has a chance to render: a link like `https://zoom.us/j/0123456789` becomes `https://zoom.us/wc/join/0123456789`.
 
-This is a personal, independent project and is **not affiliated with or endorsed by Zoom Video Communications, Inc.** I'm currently reviewing the situation and considering renaming the project to comply with trademark guidelines and Microsoft's store policies.
+- **Toggle it on or off** anytime from the dashboard popup.
+- **Follows your system theme**, switching automatically between light and dark mode.
+- **Collects no data**: nothing is tracked, stored remotely, or sent anywhere (see [Permissions & Privacy](#permissions--privacy)).
 
----
+## Demo
 
-## Summary
+### Dashboard
 
-A web extension that redirects zoom meetings to the web client version.
+![Dashboard popup, toggle on (default), light mode](assets/dashboard.png)
 
-## Description
+### Redirect in Action
 
-"Silly Redirect for Zoom Meetings" is a web extension designed to simplify the process of redirecting Zoom meeting links to the web client version. By replacing a portion of the URL with */wc/join/*, the extension automatically loads the meeting joining page in the web client. For instance, a link like `https://zoom.us/j/0123456789` would be converted to `https://zoom.us/wc/join/0123456789`.
-This approach is aimed at leveraging the security features of web browsers and providing a seamless experience for joining Zoom meetings via the web browser. The extension also offers a toggle for easy enable/disable functionality and does not collect any user data, ensuring privacy and security.
+![Redirecting a Zoom meeting link to the web client automatically](assets/redirect-clip.gif)
 
-## Features
-
-### Extension toggle
-
-When opening the dashboard there is a toggle to enable/disable the extension to better control the behaviour whenever wanted.
-
-### Dark mode
-
-According to system settings the extension's dashboard has the corresponding theme.
-
-## Installation
-
-<table>
-    <thead align="center">
-        <tr>
-            <th>Mozilla Firefox Add-on</th>
-            <th>Chrome (and<br>Chromium<br>based browsers)*</th>
-            <th>Microsoft Edge*</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-          <td><a href="https://addons.mozilla.org/firefox/addon/silly-redirect-for-zoom">
-         <img alt="Mozilla Firefox" src="https://img.shields.io/amo/v/silly-redirect-for-zoom?label=firefox&logo=Firefox&style=for-the-badge"></a></td>
-          <td><a href="https://chrome.google.com/webstore/detail/dammgkhaofolinipgnjjiocadmmhidch">
-          <img alt="Chrome" src="https://img.shields.io/chrome-web-store/v/dammgkhaofolinipgnjjiocadmmhidch?label=chrome&logo=google-chrome&style=for-the-badge"></a></td>
-          <td><a href="https://microsoftedge.microsoft.com/addons/detail/kfpmepjfaolgcgabdmbpkfnicejbiggn">
-       <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge%09%09&logo=microsoft-edge&style=for-the-badge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fkfpmepjfaolgcgabdmbpkfnicejbiggn"></a></td>
-        </tr>
-    </tbody>
-</table>
-
-\* Addon is based on branch [manifest-v3](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/manifest-v3)
-
-## Dashboard
-
-<table>
-    <thead align="center">
-        <tr>
-            <th colspan=2>Light Mode</th>
-            <th colspan=2>Dark Mode</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td>Toggle Off</td>
-            <td>Toggle On<br>(Default)</td>
-            <td>Toggle Off</td>
-            <td>Toggle On<br>(Default)</td>
-        </tr>
-        <tr>
-          <td><img alt="Toggle Off - Light Mode" src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/assets/dashboard/off-light.png"></td>
-          <td><img alt="Toggle On - Light Mode" src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/assets/dashboard/on-light.png"></td>
-          <td><img alt="Toggle Off - Dark Mode" src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/assets/dashboard/off-dark.png"></td>
-          <td><img alt="Toggle On - Dark Mode" src="https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/assets/dashboard/on-dark.png"></td>
-        </tr>
-    </tbody>
-</table>
-
-## Redirect example
-
-![Gif](https://raw.githubusercontent.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/main/assets/example/redirect_clip.gif)
-
-## Privacy policy
+## Permissions & Privacy
 
 Silly Redirect for Zoom Meetings does **NOT** collect any data of any kind.
 
-## Permissions
-
-**Manifest V2** ([main](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main) branch)
-
-https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/452ad56b6cab7e37dc38be18c635ca0d93dd1341/src/manifest.json#L17-L22
-
-**Manifest V3** ([manifest-v3](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/manifest-v3) branch)
-
-https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L17-L20
-
-https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/a4549aef606ce1278f129e1e062d4e0b9178d6b7/src/manifest.json#L66-L69
+Both browser builds use **Manifest V3** and are generated from the same source. Shared permissions are defined in [`src/manifests/base.json`](src/manifests/base.json) and merged with browser-specific overrides at build time.
 
 | Permission | Purpose |
 |:----:|:----:|
-| `activeTab` | Used to open hyperlinks in the dashboard |
-| `storage` | Used to store the status of the slide checkbox |
-| `*://*.zoom.us/*` and `*://*.zoomgov.com/*` | Used to run the extension only when a page matches one of these URLs |
+| `storage` | Persists the enable/disable toggle state |
+| `*://*.zoom.us/*` and `*://*.zoomgov.com/*` | Scopes the content script and host access to Zoom domains only |
 
-## Translation
+> Both Chrome/Edge and Firefox (128.0+) declare URL patterns as `host_permissions` under Manifest V3.
 
-If you'd like to contribute translations for this project, please refer to the [Translation Guide](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/main/TRANSLATION.md).
+## Building from Source
 
-## Changelog
+Requires [Node.js](https://nodejs.org/) ≥ 22.
 
-For more details see the [CHANGELOG](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main/CHANGELOG.md) file.
+**For development** (load as an unpacked extension):
 
-## Release History
+```sh
+npm run build          # both browsers
+npm run build:chrome
+npm run build:firefox
+```
 
-See the [releases pages](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/releases) for a history of releases and highlights for each release.
+Outputs are written to `dist/chrome/` and `dist/firefox/`. Load either folder in your browser's developer mode.
 
-## Security Policy
+**For distribution** (produces ZIPs ready for store submission):
 
-For more details see the [SECURITY](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/blob/main/SECURITY.md) file.
+```sh
+npm run pack           # both browsers
+npm run pack:chrome
+npm run pack:firefox
+```
+
+ZIPs are written to `dist/` as `silly-redirect-for-zoom-meetings-<version>-<browser>.zip`.
+
+Releases are published automatically when a version tag (e.g. `v5.0.0`) is pushed to `main`. A `CI` workflow runs lint and tests on every push and pull request; the `Release` workflow re-runs the tests, then runs `npm run pack` and attaches the ZIPs to the GitHub release.
 
 ## Contributing
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge)](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main/CODE_OF_CONDUCT.md)  
-When contributing to this repository, please first discuss the change you wish to make via issue, discussion, or any other method with the owner of this repository before making a change.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge)](CODE_OF_CONDUCT.md)
 
-**Read carefully the [contributing guidelines](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main/CONTRIBUTING.md).**
+When contributing to this repository, please first discuss the change you wish to make via issue, discussion, or any other method with the owner of this repository before making a change. Read the [contributing guidelines](CONTRIBUTING.md) carefully.
+
+Want to help translate the extension? See the [Translation Guide](TRANSLATION.md).
+
+See [CHANGELOG.md](CHANGELOG.md) or the [releases page](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/releases) for release history, and [SECURITY.md](SECURITY.md) to report a vulnerability.
 
 ## License
 
-This software is released under the terms of the GNU General Public License v3.0. See the [LICENSE](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/main/LICENSE) file for further information.
+This software is released under the terms of the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for further information.

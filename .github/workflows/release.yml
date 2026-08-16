@@ -1,0 +1,65 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+# Least-privilege: only the release job needs write access to contents.
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+        env:
+          NPM_CONFIG_MIN_RELEASE_AGE: 0
+
+      - name: Verify tag matches package.json version
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          TAG_VERSION="${{ github.ref_name }}"
+          TAG_VERSION="${TAG_VERSION#v}"
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "Error: package.json version ($PKG_VERSION) does not match tag ($TAG_VERSION)"
+            exit 1
+          fi
+
+      - name: Test
+        run: npm test
+
+      - name: Build and package extensions
+        run: npm run pack
+
+      - name: Extract release notes from CHANGELOG
+        id: notes
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          notes=$(awk "/^## \[$version\]/{found=1; next} found && /^## \[/{exit} found{print}" CHANGELOG.md)
+          echo "body<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$notes" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v3
+        with:
+          name: ${{ github.ref_name }}
+          body: ${{ steps.notes.outputs.body }}
+          files: dist/silly-redirect-for-zoom-meetings-*.zip
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,120 @@
+/* Vendored github-markdown.css is dark-only; this adds a prefers-color-scheme: light variant, plus the alert boxes it has no classes for. */
+
+:root {
+  --page-bg: #262626;
+  --page-fg: #f5f5f5;
+  --muted-fg: #999999;
+  --border: #444444;
+  --table-cell-bg: #262626;
+  --table-stripe-bg: #303030;
+  --code-inline-bg: #011627;
+  --code-inline-fg: #f5f5f5;
+  --alert-bg: #2d333b;
+  --alert-fg: #f5f5f5;
+  --alert-note: #58a6ff;
+  --alert-tip: #3fb950;
+  --alert-important: #a371f7;
+  --alert-warning: #d29922;
+  --alert-caution: #f85149;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-bg: #ffffff;
+    --page-fg: #24292e;
+    --muted-fg: #777777;
+    --border: #dddddd;
+    --table-cell-bg: #ffffff;
+    --table-stripe-bg: #f8f8f8;
+    --code-inline-bg: #f3f4f6;
+    --code-inline-fg: #24292e;
+    --alert-bg: #eaeef2;
+    --alert-fg: #24292e;
+    --alert-note: #0969da;
+    --alert-tip: #1a7f37;
+    --alert-important: #8250df;
+    --alert-warning: #9a6700;
+    --alert-caution: #cf222e;
+  }
+}
+
+html,
+body {
+  background-color: var(--page-bg);
+}
+
+.markdown-body {
+  color: var(--page-fg);
+}
+
+.markdown-body h6 {
+  color: var(--muted-fg);
+}
+
+.markdown-body hr {
+  background-color: var(--border);
+}
+
+.markdown-body blockquote {
+  color: var(--muted-fg);
+  border-left-color: var(--border);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  background-color: var(--table-cell-bg);
+  border-color: var(--border);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--table-stripe-bg);
+}
+
+.markdown-body code {
+  background-color: var(--code-inline-bg);
+  color: var(--code-inline-fg);
+}
+
+.markdown-body pre {
+  border: 1px solid var(--border);
+}
+
+.markdown-body pre code.hljs {
+  display: inline;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  color: #24292e;
+}
+
+.markdown-body .markdown-alert {
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  border-left: 0.25em solid var(--muted-fg);
+  background: var(--alert-bg);
+  color: var(--alert-fg);
+}
+
+.markdown-body .markdown-alert > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert-title {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.markdown-body .markdown-alert-note      { border-left-color: var(--alert-note); }
+.markdown-body .markdown-alert-note      .markdown-alert-title { color: var(--alert-note); }
+
+.markdown-body .markdown-alert-tip       { border-left-color: var(--alert-tip); }
+.markdown-body .markdown-alert-tip       .markdown-alert-title { color: var(--alert-tip); }
+
+.markdown-body .markdown-alert-important { border-left-color: var(--alert-important); }
+.markdown-body .markdown-alert-important .markdown-alert-title { color: var(--alert-important); }
+
+.markdown-body .markdown-alert-warning   { border-left-color: var(--alert-warning); }
+.markdown-body .markdown-alert-warning   .markdown-alert-title { color: var(--alert-warning); }
+
+.markdown-body .markdown-alert-caution   { border-left-color: var(--alert-caution); }
+.markdown-body .markdown-alert-caution   .markdown-alert-title { color: var(--alert-caution); }

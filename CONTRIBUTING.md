@@ -32,6 +32,9 @@
 
 1. *Fork the repository.*
 2. *Clone it to your local machine to work with the Project.*
-3. **ADD ANY OTHERS STEPS IN HERE!**
-4. *Open the Project in the Editor of your choice.*
-5. *Congratulations, you are now ready to Contribute.* 🎉
+3. *Install dependencies:* `npm install`
+4. *Build the extension:* `npm run build`
+5. *Load `dist/chrome/` or `dist/firefox/` as an unpacked extension in your browser's developer mode.*
+6. *Run the test suite:* `npm test`
+7. *Open the Project in the Editor of your choice.*
+8. *Congratulations, you are now ready to Contribute.* 🎉

@@ -16,6 +16,13 @@ Next, create a new branch called "l10n_main". You can do this using the followin
 git checkout -b l10n_main
 ```
 
+Install dependencies and build the extension so you can load it in the browser:
+
+```bash
+npm install
+npm run build
+```
+
 ## Translating Content
 
 Great! Now, you can start translating. Head over to the `src/_locales` directory. Find the folder for the language you're translating to (like "fr" for French or "es" for Spanish). Open the `messages.json` file in this folder. Replace the English text with your translations. Remember, the keys must stay the same as in the English file.
@@ -29,21 +36,21 @@ Lastly, it's crucial to test your translations. Install the code as a browser ex
 1. Open the `about:debugging` page in Firefox.
 2. Click the "This Firefox" option.
 3. Click the "Load Temporary Add-on" button.
-4. Select the `manifest.json` file, which is found in the `src` folder of your local repository.
+4. Navigate to the `dist/firefox/` folder in your local repository and select the `manifest.json` file inside it.
 
-The extension now installs and remains installed until you restart Firefox. Alternatively, you can run the extension from the command line using the `web-ext` tool.
+The extension now installs and remains installed until you restart Firefox.
 
-After making changes to the extension's files, click the "Reload" button in the Debugging Tools panel to apply the changes and see them in effect.
+After making changes to the locale files, run `npm run build` again, then click the "Reload" button in the Debugging Tools panel to apply the changes.
 
 ### Chrome
 
 1. Open the Extensions page in Chrome (`chrome://extensions`).
 2. Enable Developer mode by clicking the toggle switch in the top right corner.
-3. Locate the 'Load unpacked' button and click on it. Then, navigate to the `src` folder in your local repository and select it.
+3. Click "Load unpacked" and select the `dist/chrome/` folder in your local repository.
 
-Your extension is now installed and active in Chrome. Any changes you make to the extension's files will automatically be reflected in the browser.
+Your extension is now installed and active in Chrome.
 
-After making changes to the extension's files, click the "Reload" icon (circular arrow) in the Extensions page to apply the changes and see them in effect.
+After making changes to the locale files, run `npm run build` again, then click the "Reload" icon (circular arrow) on the Extensions page to apply the changes.
 
 ## Saving Your Work
 

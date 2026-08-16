@@ -2,7 +2,6 @@
   color-scheme: light dark;
 }
 
-/* Popup menu main stylesheet */
 body {
   text-shadow: var(--text-shadow-name);
   padding-left: 10px;
@@ -15,7 +14,6 @@ body {
   background-color: var(--background-color);
 }
 
-/* Title stylesheet */
 .header {
   color: var(--name-addon-color);
   text-align: center;
@@ -29,7 +27,6 @@ h3 {
   cursor: default;
 }
 
-/* Link stylesheet */
 p {
   text-shadow: var(--text-shadow-footer) !important;
   text-align: center;
@@ -57,7 +54,6 @@ a {
   cursor: default;
 }
 
-/* Checkbox stylesheet */
 .switch {
 
   cursor: pointer;
@@ -84,14 +80,14 @@ a {
   transition: all 0.25s;
   box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.25);
 }
-.mycheckbox:checked + .switch::after {
+.my-checkbox:checked + .switch::after {
   box-shadow: var(--box-shadow);
   left: 36px;
 }
-.mycheckbox:checked + .switch {
+.my-checkbox:checked + .switch {
   box-shadow: inset var(--checkbox-inner-shadow);
   background-color: var(--icon-color-reference);
 }
-.mycheckbox {
+.my-checkbox {
   display: none;
 }
