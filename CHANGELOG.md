@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Firefox: `data_collection_permissions` declared as `["none"]`, required by Firefox for all new extensions (and eventually all extensions).
+
+### Changed
+
+- Firefox: minimum version raised from 128.0 to 140.0 (142.0 on Android), the versions that added support for `data_collection_permissions`.
+
+### Fixed
+
+- Popup's title is meant to wrap onto two lines (every locale's `popup_title` message already has a line break baked in), but the popup had no width limit and `white-space: nowrap` suppressed it, so the popup just grew wide enough to fit the title on one line instead. The popup is now a fixed, compact width and the title wraps as intended.
+
 ## [5.0.1](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v5.0.1) - 2026-08-16
 
 ### Added

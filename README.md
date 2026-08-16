@@ -55,7 +55,7 @@ Both browser builds use **Manifest V3** and are generated from the same source. 
 | `storage` | Persists the enable/disable toggle state |
 | `*://*.zoom.us/*` and `*://*.zoomgov.com/*` | Scopes the content script and host access to Zoom domains only |
 
-> Both Chrome/Edge and Firefox (128.0+) declare URL patterns as `host_permissions` under Manifest V3.
+> Both Chrome/Edge and Firefox (140.0+, 142.0+ on Android) declare URL patterns as `host_permissions` under Manifest V3.
 
 ## Building from Source
 
