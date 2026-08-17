@@ -4,10 +4,6 @@
 // instant/scheduled/recurring meetings). See https://developers.zoom.us/docs/api/meetings/
 const MEETING_ID_RE = /^\d{10,11}$/;
 
-function isEnabled(toggle) {
-  return toggle === undefined || toggle === true || toggle === 'true';
-}
-
 function getRedirectTarget(pathname, hostname, search) {
   const segments = pathname.split('/');
   const type = segments[1];
@@ -36,5 +32,6 @@ if (typeof chrome !== 'undefined') {
 }
 
 if (typeof module !== 'undefined') {
+  const { isEnabled } = require('./toggle.js');
   module.exports = { isEnabled, getRedirectTarget };
 }

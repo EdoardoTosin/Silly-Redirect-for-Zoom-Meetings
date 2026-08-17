@@ -49,6 +49,7 @@ module.exports = [
         chrome: 'readonly',
         module: 'writable',
         require: 'readonly',
+        isEnabled: 'readonly',
       },
     },
     rules: commonRules,

@@ -28,6 +28,7 @@
 				"file://*/*"
 			],
 			"js": [
+				"js/toggle.js",
 				"js/redirect.js"
 			],
 			"run_at": "document_start",

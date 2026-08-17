@@ -1,15 +1,24 @@
 'use strict';
 
-// If `prefers-color-scheme` is not supported, fall back to light mode.
-if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-  document.documentElement.style.display = 'none';
+function needsColorSchemeFallback(mediaType) {
+  return mediaType === 'not all';
+}
 
-  const link = document.createElement('link');
-  link.rel  = 'stylesheet';
-  link.href = '../css/light.css';
-  link.addEventListener('load', () => {
-    document.documentElement.style.display = '';
-  });
+if (typeof window !== 'undefined') {
+  if (needsColorSchemeFallback(window.matchMedia('(prefers-color-scheme: dark)').media)) {
+    document.documentElement.style.display = 'none';
 
-  document.head.appendChild(link);
+    const link = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.href = '../css/light.css';
+    link.addEventListener('load', () => {
+      document.documentElement.style.display = '';
+    });
+
+    document.head.appendChild(link);
+  }
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { needsColorSchemeFallback };
 }

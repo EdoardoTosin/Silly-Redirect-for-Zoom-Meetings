@@ -70,27 +70,24 @@ function loadPopupContent() {
   setProp('#addon-version',   'textContent', `v${manifest.version}`);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadPopupContent();
+if (typeof chrome !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    loadPopupContent();
 
-  chrome.storage.local.get('toggle', (items) => {
-    const enabled =
-      items.toggle === undefined ||
-      items.toggle === true      ||
-      items.toggle === 'true';
+    chrome.storage.local.get('toggle', (items) => {
+      applyState(isEnabled(items.toggle));
+    });
 
-    applyState(enabled);
+    const toggleEl = document.getElementById('toggle');
+    if (toggleEl) {
+      toggleEl.addEventListener('change', (e) => saveState(e.target.checked));
+    }
   });
 
-  const toggleEl = document.getElementById('toggle');
-  if (toggleEl) {
-    toggleEl.addEventListener('change', (e) => saveState(e.target.checked));
-  }
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target.href) {
-    chrome.tabs.create({ url: e.target.href });
-    window.close();
-  }
-});
+  window.addEventListener('click', (e) => {
+    if (e.target.href) {
+      chrome.tabs.create({ url: e.target.href });
+      window.close();
+    }
+  });
+}
