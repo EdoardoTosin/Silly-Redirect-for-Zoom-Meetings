@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Popup's title is meant to wrap onto two lines (every locale's `popup_title` message already has a line break baked in), but the popup had no width limit and `white-space: nowrap` suppressed it, so the popup just grew wide enough to fit the title on one line instead. The popup is now a fixed, compact width and the title wraps as intended.
+- Clicking a footer link (changelog, issue tracker, source code) in the popup opened it in a new tab but didn't stop the popup's own default navigation, so the popup itself would also start navigating to that URL before closing. The click is now prevented before the new tab opens.
 
 ## [5.0.1](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings/tree/v5.0.1) - 2026-08-16
 

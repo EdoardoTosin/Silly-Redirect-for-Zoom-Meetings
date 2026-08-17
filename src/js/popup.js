@@ -70,6 +70,16 @@ function loadPopupContent() {
   setProp('#addon-version',   'textContent', `v${manifest.version}`);
 }
 
+function handleFooterLinkClick(target, { preventDefault, openTab, closeWindow }) {
+  const href = target && target.href;
+  if (!href) return false;
+
+  preventDefault();
+  openTab(href);
+  closeWindow();
+  return true;
+}
+
 if (typeof chrome !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
     loadPopupContent();
@@ -85,9 +95,14 @@ if (typeof chrome !== 'undefined') {
   });
 
   window.addEventListener('click', (e) => {
-    if (e.target.href) {
-      chrome.tabs.create({ url: e.target.href });
-      window.close();
-    }
+    handleFooterLinkClick(e.target, {
+      preventDefault: () => e.preventDefault(),
+      openTab: (url) => chrome.tabs.create({ url }),
+      closeWindow: () => window.close(),
+    });
   });
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { handleFooterLinkClick };
 }
