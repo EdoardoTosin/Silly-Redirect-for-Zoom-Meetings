@@ -70,6 +70,84 @@ describe('getRedirectTarget - start', () => {
   });
 });
 
+describe('getRedirectTarget - Vanity URL subdomain (examples per KB0061540)', () => {
+  it('works for a lettered subdomain (join)', () => {
+    assert.equal(
+      getRedirectTarget('/j/1234567890', 'hooli.zoom.us', ''),
+      'https://hooli.zoom.us/wc/join/1234567890'
+    );
+  });
+  it('works for a hyphenated subdomain (join)', () => {
+    assert.equal(
+      getRedirectTarget('/j/1234567890', 'hooli-org.zoom.us', ''),
+      'https://hooli-org.zoom.us/wc/join/1234567890'
+    );
+  });
+  it('works for a numeric subdomain (join)', () => {
+    assert.equal(
+      getRedirectTarget('/j/1234567890', '1234.zoom.us', ''),
+      'https://1234.zoom.us/wc/join/1234567890'
+    );
+  });
+  it('works for a lettered subdomain (start)', () => {
+    assert.equal(
+      getRedirectTarget('/s/1234567890', 'hooli.zoom.us', ''),
+      'https://hooli.zoom.us/wc/1234567890/start'
+    );
+  });
+  it('preserves search params', () => {
+    assert.equal(
+      getRedirectTarget('/j/1234567890', 'hooli.zoom.us', '?pwd=abc123XYZ'),
+      'https://hooli.zoom.us/wc/join/1234567890?pwd=abc123XYZ'
+    );
+  });
+  it('still returns null for an invalid ID', () => {
+    assert.equal(getRedirectTarget('/j/123', 'hooli.zoom.us', ''), null);
+  });
+});
+
+describe('getRedirectTarget - path structure edge cases', () => {
+  it('keeps a leading zero in the ID', () => {
+    assert.equal(
+      getRedirectTarget('/j/0123456789', 'zoom.us', ''),
+      'https://zoom.us/wc/join/0123456789'
+    );
+  });
+  it('ignores a trailing slash after the ID', () => {
+    assert.equal(
+      getRedirectTarget('/j/1234567890/', 'zoom.us', ''),
+      'https://zoom.us/wc/join/1234567890'
+    );
+  });
+  it('ignores extra path segments after the ID', () => {
+    assert.equal(
+      getRedirectTarget('/j/1234567890/extra', 'zoom.us', ''),
+      'https://zoom.us/wc/join/1234567890'
+    );
+  });
+  it('returns null for a doubled leading slash (type segment shifts to empty)', () => {
+    assert.equal(getRedirectTarget('//j/1234567890', 'zoom.us', ''), null);
+  });
+  it('returns null when the ID has an embedded space', () => {
+    assert.equal(getRedirectTarget('/j/ 1234567890', 'zoom.us', ''), null);
+  });
+});
+
+describe('getRedirectTarget - type is case-sensitive', () => {
+  it('returns null for uppercase /J/', () => {
+    assert.equal(getRedirectTarget('/J/1234567890', 'zoom.us', ''), null);
+  });
+  it('returns null for uppercase /S/', () => {
+    assert.equal(getRedirectTarget('/S/1234567890', 'zoom.us', ''), null);
+  });
+});
+
+describe('getRedirectTarget - digit matching is ASCII-only', () => {
+  it('returns null for full-width Unicode digits', () => {
+    assert.equal(getRedirectTarget('/j/１２３４５６７８９０', 'zoom.us', ''), null);
+  });
+});
+
 describe('getRedirectTarget - invalid ID', () => {
   it('returns null for 8-digit ID (too short)', () => {
     assert.equal(getRedirectTarget('/j/12345678', 'zoom.us', ''), null);
