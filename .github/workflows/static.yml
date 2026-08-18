@@ -2,10 +2,8 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["main"]
-    paths:
-      - 'README.md'   # docs/index.html is generated from this
-      - 'docs/**'     # Trigger when the site's own assets change too
+    tags:
+      - 'v*'
 
   workflow_dispatch:
 
