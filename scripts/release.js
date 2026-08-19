@@ -36,7 +36,7 @@ function main() {
   }
 
   console.log(`Releasing v${target} (from CHANGELOG.md, currently v${current})...`);
-  execFileSync('npm', ['version', target], { cwd: ROOT_DIR, stdio: 'inherit' });
+  execFileSync('npm', ['version', target], { cwd: ROOT_DIR, stdio: 'inherit', shell: true });
 }
 
 runMain(main);
