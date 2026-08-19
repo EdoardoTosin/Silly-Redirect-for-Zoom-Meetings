@@ -1,6 +1,6 @@
 {
   "name": "silly-redirect-for-zoom-meetings",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "description": "A web extension that redirects Zoom meetings to the web client",
   "license": "GPL-3.0-only",
   "private": true,

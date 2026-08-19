@@ -81,7 +81,7 @@ npm run pack:firefox
 
 ZIPs are written to `dist/` as `silly-redirect-for-zoom-meetings-<version>-<browser>.zip`.
 
-Releases are published automatically when a version tag (e.g. `v5.0.1`) is pushed to `main`. A `CI` workflow runs lint and tests on every push and pull request; the `Release` workflow re-runs the tests, then runs `npm run pack` and attaches the ZIPs to the GitHub release.
+Releases are published automatically when a version tag (e.g. `v5.1.0`) is pushed to `main`. A `CI` workflow runs lint and tests on every push and pull request; the `Release` workflow re-runs the tests, then runs `npm run pack` and attaches the ZIPs to the GitHub release.
 
 ## Contributing
 
